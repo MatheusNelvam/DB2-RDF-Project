@@ -1,0 +1,398 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/estagiario02/ontologies/2023/10/"
+     xml:base="http://www.semanticweb.org/estagiario02/ontologies/2023/10/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#belongsToVendor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#belongsToVendor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#hasProduct -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#hasProduct">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#shipmentForTransaction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#shipmentForTransaction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#Shipment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#suppliesProduct -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#suppliesProduct">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#Supplier"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#transactionForProject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#transactionForProject">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainTransaction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#country -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#country">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProduct"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#deliveredToClientDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#deliveredToClientDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProject"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#deliveryRecordedDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#deliveryRecordedDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#freightCostUSD -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#freightCostUSD">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#Shipment"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#fulfillVia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#fulfillVia">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#itemDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#itemDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProduct"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#lineItemQuantity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#lineItemQuantity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainTransaction"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#lineItemValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#lineItemValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainTransaction"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#managedBy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#managedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProduct"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#poSentToVendorDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#poSentToVendorDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#pqFirstSentToClientDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#pqFirstSentToClientDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProduct"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#productGroup -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#productGroup">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProduct"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#projectCode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#projectCode">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProduct"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#projectID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#projectID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProduct"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#scheduledDeliveryDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#scheduledDeliveryDate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#shipmentMode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#shipmentMode">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#subClassification -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#subClassification">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProduct"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#vendorINCOTerm -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#vendorINCOTerm">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProject"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#vendorName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#vendorName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#Supplier"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#weightInKilograms -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#weightInKilograms">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#Shipment"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#Country"/>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#Distributor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#Distributor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#Supplier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#DomesticShipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#DomesticShipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#Shipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#DomesticSupplyChainProject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#DomesticSupplyChainProject">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#InternationalShipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#InternationalShipment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#Shipment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#InternationalSupplyChainProject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#InternationalSupplyChainProject">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#Manufacturer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#Manufacturer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#Supplier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#MedicalDeviceProduct -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#MedicalDeviceProduct">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#PharmaceuticalProduct -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#PharmaceuticalProduct">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProduct"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#PurchaseTransaction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#PurchaseTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainTransaction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SalesTransaction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SalesTransaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainTransaction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#Shipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#Shipment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#Supplier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#Supplier"/>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProduct -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProduct"/>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProject"/>
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainTransaction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainTransaction"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#hasProduct -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#hasProduct">
+        <rdf:type rdf:resource="http://www.semanticweb.org/estagiario02/ontologies/2023/10/DB2-Project#SupplyChainProject"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
