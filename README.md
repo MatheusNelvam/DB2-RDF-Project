@@ -1,36 +1,31 @@
-# DB2-RDF-Project
+# DB2-RDF-Project MONC GROUP
 
-## 2023/11/11 - Project Update
+**General Project Description: Supply Chain Ontology**
 
-### Completed Tasks:
+This project involves the creation of an ontology to model concepts and relationships within a supply chain. An ontology is a formal, semantic representation of a specific domain, and, in this case, we are using the OWL (Web Ontology Language) to structure and define entities relevant to supply chain management.
 
-1. **Basic Ontology Creation:**
-   - Created the foundational structure of the ontology based on the provided Excel data.
+### Project Objective
 
-### Next Steps:
+The primary goal of this ontology is to provide a clear and semantic framework to represent different elements involved in a supply chain, such as supply chain projects, shipments, vendors, products, countries, and more. By employing an ontology, we aim to enhance understanding and interoperability among systems dealing with supply chain-related information.
 
-#### 2. Modify and Complete the Ontology:
+### How to Use
 
-   a. **Country Class:**
-      - Investigate how to properly define the 'Country' class. Explore possibilities of importing existing RDF data for subclasses like 'CountryName' and 'CountryCode.'
+To utilize the ontology, you can explore and edit concepts and relationships in Protegé, an ontology editing tool. Follow the step-by-step instructions provided in the project's README to clone the repository, open the ontology in Protegé, add instances, define relationships, and save your changes.
 
-   b. **Disjoint With Attribute:**
-      - Research and implement the 'disjoint with' attribute in the ontology to ensure proper modeling.
+### Key Components
 
-   c. **Adding Instances:**
-      - Explore methods to add instances of classes and subclasses. Consider practical approaches for populating the ontology with relevant data.
+The main classes in the ontology include:
 
-#### 3. Study Slides and Complete Tasks:
+- **SupplyChainProject:** Represents specific projects related to the supply chain.
+- **Shipment:** Represents the physical shipment of products.
+- **Vendor:** Represents suppliers or sellers.
+- **Product:** Represents specific products.
+- **Country:** Represents countries.
 
-   - Review lecture slides to gain insights into modeling the domain of interest.
-   - Create a visual graph representation of the model.
-   - Generate an OWL file for the ontology by the end of next week.
+Additionally, properties such as `belongsToChain`, `hasShipment`, `suppliesProduct`, `projectName`, `vendorName`, `shipmentDate`, and `productPrice` are used to define specific relationships and attributes.
 
-### General Notes:
+### Disclaimer
 
-- Regularly update this markdown file to document progress and any challenges encountered.
-- Consider using tools or libraries that facilitate RDF and OWL ontology development.
-- Collaborate with the team to gather insights and address any concerns.
-- Break down complex tasks into manageable subtasks to streamline the workflow.
+This project is a conceptual representation and is not intended to be a ready-to-use implementation. The adaptability of the ontology to specific cases may require modifications according to user needs.
 
-Feel free to continuously update and organize this markdown file as the project progresses. If you have specific questions or encounter challenges, don't hesitate to ask for assistance. Good luck with the project!
+We hope this ontology serves as a valuable tool for modeling and understanding processes in supply chains, promoting interoperability, and facilitating communication among systems dealing with information related to this specific domain.
