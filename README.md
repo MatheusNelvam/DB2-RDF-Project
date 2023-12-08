@@ -28,4 +28,6 @@ Additionally, properties such as `belongsToChain`, `hasShipment`, `suppliesProdu
 
 This project is a conceptual representation and is not intended to be a ready-to-use implementation. The adaptability of the ontology to specific cases may require modifications according to user needs.
 
+
 We hope this ontology serves as a valuable tool for modeling and understanding processes in supply chains, promoting interoperability, and facilitating communication among systems dealing with information related to this specific domain.
+
