@@ -715,7 +715,7 @@
  <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HRDT1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HRDT1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ACT"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HRDT"/>
         <supplyChain:Brand>Reveal</supplyChain:Brand>
         <supplyChain:Dosage>N/A</supplyChain:Dosage>
         <supplyChain:DosageForm>Test kit</supplyChain:DosageForm>
@@ -739,6 +739,22 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HRDT2">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HRDT"/>
+        <supplyChain:Brand>Determine</supplyChain:Brand>
+        <supplyChain:Dosage>N/A</supplyChain:Dosage>
+        <supplyChain:DosageForm>Test kit</supplyChain:DosageForm>
+        <supplyChain:FirstLineDesignation>Yes</supplyChain:FirstLineDesignation>
+        <supplyChain:FreightCost>3499.18</supplyChain:FreightCost>
+        <supplyChain:ItemDescription>HIV 1/2, Determine Complete HIV Kit, 100 Tests</supplyChain:ItemDescription>
+        <supplyChain:LineItemInsurance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">156.8</supplyChain:LineItemInsurance>
+        <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</supplyChain:LineItemQuantity>
+        <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80000.0</supplyChain:LineItemValue>
+        <supplyChain:ManufacturingSite>ABBVIE GmbH Co.KG Wiesbaden</supplyChain:ManufacturingSite>
+        <supplyChain:MoleculeTestType>HIV, Reveal G3 Rapid HIV-1 Antibody Test</supplyChain:MoleculeTestType>
+        <supplyChain:PackPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80.0</supplyChain:PackPrice>
+        <supplyChain:SubClassification>HIV test</supplyChain:SubClassification>
+        <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</supplyChain:UnitPrice>
+        <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</supplyChain:UnitofMeasure>
+        <supplyChain:Weight>337</supplyChain:Weight>
     </owl:NamedIndividual>
     
 
@@ -747,6 +763,22 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HRDT3">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HRDT"/>
+        <supplyChain:Brand>Orgenics, Ltd</supplyChain:Brand>
+        <supplyChain:Dosage>N/A</supplyChain:Dosage>
+        <supplyChain:DosageForm>Test kit</supplyChain:DosageForm>
+        <supplyChain:FirstLineDesignation>Yes</supplyChain:FirstLineDesignation>
+        <supplyChain:FreightCost>2648.82</supplyChain:FreightCost>
+        <supplyChain:ItemDescription>HIV 1/2, Determine HIV Kit, without Lancets, 100 Tests</supplyChain:ItemDescription>
+        <supplyChain:LineItemInsurance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">115.18</supplyChain:LineItemInsurance>
+        <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</supplyChain:LineItemQuantity>
+        <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">71990.0</supplyChain:LineItemValue>
+        <supplyChain:ManufacturingSite>Inverness Japan</supplyChain:ManufacturingSite>
+        <supplyChain:MoleculeTestType>HIV 1/2, Determine HIV Kit, without Lancets</supplyChain:MoleculeTestType>
+        <supplyChain:PackPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">71.99</supplyChain:PackPrice>
+        <supplyChain:SubClassification>HIV test</supplyChain:SubClassification>
+        <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.72</supplyChain:UnitPrice>
+        <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</supplyChain:UnitofMeasure>
+        <supplyChain:Weight>296.0</supplyChain:Weight>
     </owl:NamedIndividual>
     
 
@@ -764,6 +796,22 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#MRDT1">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#MRDT"/>
+        <supplyChain:Brand>Paramax</supplyChain:Brand>
+        <supplyChain:Dosage>N/A</supplyChain:Dosage>
+        <supplyChain:DosageForm>Test kit</supplyChain:DosageForm>
+        <supplyChain:FirstLineDesignation>Yes</supplyChain:FirstLineDesignation>
+        <supplyChain:FreightCost>648.27</supplyChain:FreightCost>
+        <supplyChain:ItemDescription>Malaria Paramax-3 Kit, 25 Tests</supplyChain:ItemDescription>
+        <supplyChain:LineItemInsurance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.94</supplyChain:LineItemInsurance>
+        <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">108</supplyChain:LineItemQuantity>
+        <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4050.0</supplyChain:LineItemValue>
+        <supplyChain:ManufacturingSite>Not Applicable</supplyChain:ManufacturingSite>
+        <supplyChain:MoleculeTestType>Malaria Paramax-3 Kit</supplyChain:MoleculeTestType>
+        <supplyChain:PackPrice>37.5</supplyChain:PackPrice>
+        <supplyChain:SubClassification>Malaria</supplyChain:SubClassification>
+        <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.5</supplyChain:UnitPrice>
+        <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</supplyChain:UnitofMeasure>
+        <supplyChain:Weight>34</supplyChain:Weight>
     </owl:NamedIndividual>
     
 
@@ -772,6 +820,22 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#MRDT2">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#MRDT"/>
+        <supplyChain:Brand>Paramax</supplyChain:Brand>
+        <supplyChain:Dosage>N/A</supplyChain:Dosage>
+        <supplyChain:DosageForm>Test kit</supplyChain:DosageForm>
+        <supplyChain:FirstLineDesignation>Yes</supplyChain:FirstLineDesignation>
+        <supplyChain:FreightCost>Freight Included in Commodity Cost</supplyChain:FreightCost>
+        <supplyChain:ItemDescription>Malaria Paramax-3 Kit, 25 Tests</supplyChain:ItemDescription>
+        <supplyChain:LineItemInsurance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal" >7.94</supplyChain:LineItemInsurance>
+        <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">108</supplyChain:LineItemQuantity>
+        <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4050.0</supplyChain:LineItemValue>
+        <supplyChain:ManufacturingSite>Not Applicable</supplyChain:ManufacturingSite>
+        <supplyChain:MoleculeTestType>Malaria Paramax-3 Kit</supplyChain:MoleculeTestType>
+        <supplyChain:PackPrice>37.5</supplyChain:PackPrice>
+        <supplyChain:SubClassification>Malaria</supplyChain:SubClassification>
+        <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.5</supplyChain:UnitPrice>
+        <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</supplyChain:UnitofMeasure>
+        <supplyChain:Weight>Weight Captured Separately</supplyChain:Weight>
     </owl:NamedIndividual>
     
 
@@ -822,6 +886,113 @@
         <PO:SONumber>SCMS-132180</PO:SONumber>
     </owl:NamedIndividual>
     
+    
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ4 -->
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ4">
+    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
+    <supplyChain:POSentToVendorDate>2009/3/8</supplyChain:POSentToVendorDate>
+    <supplyChain:PQFirstSenttoClientDate>Pre-PQ Process</supplyChain:PQFirstSenttoClientDate>
+    <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
+    <ASN:DNNumber>ASN-2921</ASN:DNNumber>
+    <PO:SONumber>SCMS-29340</PO:SONumber>
+</owl:NamedIndividual>
+
+        <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ5 -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ5">
+    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
+    <supplyChain:POSentToVendorDate>2002/9/15</supplyChain:POSentToVendorDate>
+    <supplyChain:PQFirstSenttoClientDate>1/20/15</supplyChain:PQFirstSenttoClientDate>
+    <supplyChain:PqNumber>FPQ-15746</supplyChain:PqNumber>
+    <ASN:DNNumber>ASN-30861</ASN:DNNumber>
+    <PO:SONumber>SCMS-275090</PO:SONumber>
+</owl:NamedIndividual>
+
+        <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ6 -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ6">
+    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
+    <supplyChain:POSentToVendorDate>Date Not Captured</supplyChain:POSentToVendorDate>
+    <supplyChain:PQFirstSenttoClientDate>Pre-PQ Process</supplyChain:PQFirstSenttoClientDate>
+    <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
+    <ASN:DNNumber>ASN-50</ASN:DNNumber>
+    <PO:SONumber>SCMS-78</PO:SONumber>
+</owl:NamedIndividual>
+
+        <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ7 -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ7">
+    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
+    <supplyChain:POSentToVendorDate>Date Not Captured</supplyChain:POSentToVendorDate>
+    <supplyChain:PQFirstSenttoClientDate>Pre-PQ Process</supplyChain:PQFirstSenttoClientDate>
+    <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
+    <ASN:DNNumber>ASN-55</ASN:DNNumber>
+    <PO:SONumber>SCMS-81</PO:SONumber>
+</owl:NamedIndividual>
+
+        <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ8 -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ8">
+    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
+    <supplyChain:POSentToVendorDate>N/A - From RDC</supplyChain:POSentToVendorDate>
+    <supplyChain:PQFirstSenttoClientDate>Date Not Captured</supplyChain:PQFirstSenttoClientDate>
+    <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
+    <ASN:DNNumber>DN-1373</ASN:DNNumber>
+    <PO:SONumber>SO-32760</PO:SONumber>
+</owl:NamedIndividual>
+
+        <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ9 -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ9">
+    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
+    <supplyChain:POSentToVendorDate>N/A - From RDC</supplyChain:POSentToVendorDate>
+    <supplyChain:PQFirstSenttoClientDate>Date Not Captured</supplyChain:PQFirstSenttoClientDate>
+    <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
+    <ASN:DNNumber>DN-1373</ASN:DNNumber>
+    <PO:SONumber>SO-32760</PO:SONumber>
+</owl:NamedIndividual>
+
+        <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ10 -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ10">
+    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
+    <supplyChain:POSentToVendorDate>8/29/08</supplyChain:POSentToVendorDate>
+    <supplyChain:PQFirstSenttoClientDate>Pre-PQ Process</supplyChain:PQFirstSenttoClientDate>
+    <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
+    <ASN:DNNumber>ASN-3047</ASN:DNNumber>
+    <PO:SONumber>SCMS-29460</PO:SONumber>
+</owl:NamedIndividual>
+
+        <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ11 -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ11">
+    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
+    <supplyChain:POSentToVendorDate>8/29/08</supplyChain:POSentToVendorDate>
+    <supplyChain:PQFirstSenttoClientDate>Pre-PQ Process</supplyChain:PQFirstSenttoClientDate>
+    <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
+    <ASN:DNNumber>ASN-2403</ASN:DNNumber>
+    <PO:SONumber>SCMS-29440</PO:SONumber>
+</owl:NamedIndividual>
+
+        <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ12 -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ12">
+    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
+    <supplyChain:POSentToVendorDate>7/28/08</supplyChain:POSentToVendorDate>
+    <supplyChain:PQFirstSenttoClientDate>Pre-PQ Process</supplyChain:PQFirstSenttoClientDate>
+    <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
+    <ASN:DNNumber>ASN-2910</ASN:DNNumber>
+    <PO:SONumber>SCMS-27680</PO:SONumber>
+</owl:NamedIndividual>
+
+        <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ13 -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ13">
+    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
+    <supplyChain:POSentToVendorDate>11/19/08</supplyChain:POSentToVendorDate>
+    <supplyChain:PQFirstSenttoClientDate>Pre-PQ Process</supplyChain:PQFirstSenttoClientDate>
+    <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
+    <ASN:DNNumber>ASN-3423</ASN:DNNumber>
+    <PO:SONumber>SCMS-33940</PO:SONumber>
+</owl:NamedIndividual>
+
+
+
+
+
+
+
 
 
     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project1 -->
@@ -908,7 +1079,107 @@
         <supplyChain:ScheduledDeliveryDate>2012/1/18</supplyChain:ScheduledDeliveryDate>
         <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
     </owl:NamedIndividual>
-    
+<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment4 -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment4">
+    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
+    <supplyChain:DeliveredToClientDate>2009/1/23</supplyChain:DeliveredToClientDate>
+    <supplyChain:DeliveryRecordedDate>2009/1/23</supplyChain:DeliveryRecordedDate>
+    <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
+    <supplyChain:ScheduledDeliveryDate>2009/1/23</supplyChain:ScheduledDeliveryDate>
+    <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment5 -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment5">
+    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
+    <supplyChain:DeliveredToClientDate>2015/7/12</supplyChain:DeliveredToClientDate>
+    <supplyChain:DeliveryRecordedDate>2015/7/13</supplyChain:DeliveryRecordedDate>
+    <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
+    <supplyChain:ScheduledDeliveryDate>2015/7/12</supplyChain:ScheduledDeliveryDate>
+    <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment6 -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment6">
+    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
+    <supplyChain:DeliveredToClientDate>2006/9/1</supplyChain:DeliveredToClientDate>
+    <supplyChain:DeliveryRecordedDate>2006/9/1</supplyChain:DeliveryRecordedDate>
+    <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
+    <supplyChain:ScheduledDeliveryDate>2006/9/1</supplyChain:ScheduledDeliveryDate>
+    <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment7 -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment7">
+    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
+    <supplyChain:DeliveredToClientDate>2006/8/11</supplyChain:DeliveredToClientDate>
+    <supplyChain:DeliveryRecordedDate>2006/8/11</supplyChain:DeliveryRecordedDate>
+    <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
+    <supplyChain:ScheduledDeliveryDate>2006/8/11</supplyChain:ScheduledDeliveryDate>
+    <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment8 -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment8">
+    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
+    <supplyChain:DeliveredToClientDate>2009/7/31</supplyChain:DeliveredToClientDate>
+    <supplyChain:DeliveryRecordedDate>2009/7/31</supplyChain:DeliveryRecordedDate>
+    <supplyChain:FulfillVia>From RDC</supplyChain:FulfillVia>
+    <supplyChain:ScheduledDeliveryDate>2009/7/31</supplyChain:ScheduledDeliveryDate>
+    <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment9 -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment9">
+    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
+    <supplyChain:DeliveredToClientDate>2009/3/6</supplyChain:DeliveredToClientDate>
+    <supplyChain:DeliveryRecordedDate>2009/3/6</supplyChain:DeliveryRecordedDate>
+    <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
+    <supplyChain:ScheduledDeliveryDate>2009/3/6</supplyChain:ScheduledDeliveryDate>
+    <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment10 -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment10">
+    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
+    <supplyChain:DeliveredToClientDate>2008/10/3</supplyChain:DeliveredToClientDate>
+    <supplyChain:DeliveryRecordedDate>2008/10/3</supplyChain:DeliveryRecordedDate>
+    <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
+    <supplyChain:ScheduledDeliveryDate>2008/10/3</supplyChain:ScheduledDeliveryDate>
+    <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment11-->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment11">
+    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
+    <supplyChain:DeliveredToClientDate>2008/12/15</supplyChain:DeliveredToClientDate>
+    <supplyChain:DeliveryRecordedDate>2008/12/15</supplyChain:DeliveryRecordedDate>
+    <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
+    <supplyChain:ScheduledDeliveryDate>2008/12/15</supplyChain:ScheduledDeliveryDate>
+    <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment12 -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment12">
+    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
+    <supplyChain:DeliveredToClientDate>2009/3/6</supplyChain:DeliveredToClientDate>
+    <supplyChain:DeliveryRecordedDate>2009/3/6</supplyChain:DeliveryRecordedDate>
+    <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
+    <supplyChain:ScheduledDeliveryDate>2009/3/6</supplyChain:ScheduledDeliveryDate>
+    <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
+</owl:NamedIndividual>
+
+<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment13 -->
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment13">
+    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
+    <supplyChain:DeliveredToClientDate>2006/9/1</supplyChain:DeliveredToClientDate>
+    <supplyChain:DeliveryRecordedDate>2006/9/1</supplyChain:DeliveryRecordedDate>
+    <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
+    <supplyChain:ScheduledDeliveryDate>2006/9/1</supplyChain:ScheduledDeliveryDate>
+    <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
+</owl:NamedIndividual>
+
+
 
 
     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor1 -->
