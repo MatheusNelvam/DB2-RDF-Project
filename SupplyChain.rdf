@@ -677,6 +677,7 @@
     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#product1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#product1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ACT"/>
         <supplyChain:Brand>Reveal</supplyChain:Brand>
         <supplyChain:Dosage>N/A</supplyChain:Dosage>
         <supplyChain:DosageForm>Test kit</supplyChain:DosageForm>
@@ -716,6 +717,11 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project2">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project"/>
+        <supplyChain:hasCountry rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#NG"/>
+        <supplyChain:hasPQ rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ2"/>
+        <supplyChain:hasProduct rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ACT2"/>
+        <supplyChain:hasShipment rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment2"/>
+        <supplyChain:hasVendor rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor2"/>
         <supplyChain:ManagedBy>PMO - US</supplyChain:ManagedBy>
         <supplyChain:ProjectCode>112-NG-T01</supplyChain:ProjectCode>
         <supplyChain:ProjectID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">630</supplyChain:ProjectID>
