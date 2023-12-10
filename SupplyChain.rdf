@@ -167,7 +167,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#FreightCost">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#product"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Freight Cost (USD)</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -195,7 +195,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#LineItemInsurance">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#product"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment>Line Item Insurance (USD)</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -268,7 +268,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PackPrice">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#product"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#real"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#decimal"/>
     </owl:DatatypeProperty>
     
 
@@ -373,7 +373,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#Weight">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#product"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Weight (Kilograms)</rdfs:comment>
     </owl:DatatypeProperty>
     
@@ -395,14 +395,6 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    </rdf:Description>
     
 
 
@@ -523,13 +515,29 @@
      -->
 
     
-
-
-    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ACT1 -->
+<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ACT1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ACT1">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ACT"/>
-    </owl:NamedIndividual>
+        <supplyChain:Brand>Generic</supplyChain:Brand>
+        <supplyChain:Dosage>50+153mg</supplyChain:Dosage>
+        <supplyChain:DosageForm>Tablet - FDC + co-blister</supplyChain:DosageForm>
+        <supplyChain:FirstLineDesignation>Yes</supplyChain:FirstLineDesignation>
+        <supplyChain:FreightCost>12830.91</supplyChain:FreightCost>
+        <supplyChain:ItemDescription>Artesunate+Amodiaquine 50+153mg, tablets, co-blister 6+6 Tabs</supplyChain:ItemDescription>
+        <supplyChain:LineItemInsurance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.11</supplyChain:LineItemInsurance>
+        <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25000</supplyChain:LineItemQuantity>
+        <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9750</supplyChain:LineItemValue>
+        <supplyChain:ManufacturingSite>Ipca Dadra/Nagar Haveli IN</supplyChain:ManufacturingSite>
+        <supplyChain:MoleculeTestType>Artesunate+Amodiaquine</supplyChain:MoleculeTestType>
+        <supplyChain:PackPrice>0.39</supplyChain:PackPrice>
+        <supplyChain:SubClassification>ACT</supplyChain:SubClassification>
+        <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.03</supplyChain:UnitPrice>
+        <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</supplyChain:UnitofMeasure>
+        <supplyChain:Weight>1708.00</supplyChain:Weight>
+ </owl:NamedIndividual>
+
+   
     
 
 
@@ -541,9 +549,9 @@
         <supplyChain:Dosage>20/120mg</supplyChain:Dosage>
         <supplyChain:DosageForm>Tablet - FDC + blister</supplyChain:DosageForm>
         <supplyChain:FirstLineDesignation>Yes</supplyChain:FirstLineDesignation>
-        <supplyChain:FreightCost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1755.87</supplyChain:FreightCost>
+        <supplyChain:FreightCost>1755.87</supplyChain:FreightCost>
         <supplyChain:ItemDescription>Artemether/Lumefantrine 20/120mg [Coartem], scored tablets, Blister 30 x 18 Tabs</supplyChain:ItemDescription>
-        <supplyChain:LineItemInsurance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.48</supplyChain:LineItemInsurance>
+        <supplyChain:LineItemInsurance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"> 2.48</supplyChain:LineItemInsurance>
         <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34</supplyChain:LineItemQuantity>
         <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1547.68</supplyChain:LineItemValue>
         <supplyChain:ManufacturingSite>Novartis Pharma AG, Switzerland</supplyChain:ManufacturingSite>
@@ -552,7 +560,7 @@
         <supplyChain:SubClassification>ACT</supplyChain:SubClassification>
         <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.08</supplyChain:UnitPrice>
         <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">540</supplyChain:UnitofMeasure>
-        <supplyChain:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">115</supplyChain:Weight>
+        <supplyChain:Weight>115</supplyChain:Weight>
     </owl:NamedIndividual>
     
 
@@ -561,6 +569,22 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ANTM1">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ANTM"/>
+        <supplyChain:Brand>Generic</supplyChain:Brand>
+        <supplyChain:Dosage>600mg/2ml</supplyChain:Dosage>
+        <supplyChain:DosageForm>Injection</supplyChain:DosageForm>
+        <supplyChain:FirstLineDesignation>Yes</supplyChain:FirstLineDesignation>
+        <supplyChain:FreightCost>555.49</supplyChain:FreightCost>
+        <supplyChain:ItemDescription>Quinine 600mg/2ml (as dihydrochloride), injection, 2ml x 100 Ampules</supplyChain:ItemDescription>
+        <supplyChain:LineItemInsurance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.94</supplyChain:LineItemInsurance>
+        <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32</supplyChain:LineItemQuantity>
+        <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">800</supplyChain:LineItemValue>
+        <supplyChain:ManufacturingSite>Gland Pharma, Hyderabad, IN</supplyChain:ManufacturingSite>
+        <supplyChain:MoleculeTestType>Quinine (as dihydrochloride)</supplyChain:MoleculeTestType>
+        <supplyChain:PackPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25</supplyChain:PackPrice>
+        <supplyChain:SubClassification>Malaria</supplyChain:SubClassification>
+        <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.25</supplyChain:UnitPrice>
+        <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100</supplyChain:UnitofMeasure>
+        <supplyChain:Weight>68</supplyChain:Weight>
     </owl:NamedIndividual>
     
 
@@ -569,6 +593,22 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ANTM2">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ANTM"/>
+        <supplyChain:Brand>Generic</supplyChain:Brand>
+        <supplyChain:Dosage>500/25mg</supplyChain:Dosage>
+        <supplyChain:DosageForm>Tablet - FDC</supplyChain:DosageForm>
+        <supplyChain:FirstLineDesignation>No</supplyChain:FirstLineDesignation>
+        <supplyChain:FreightCost>See ASN-13412 (ID#:16085)</supplyChain:FreightCost>
+        <supplyChain:ItemDescription>Sulfadoxine/Pyrimethamine 500/25mg, tablets, 1000 Tabs</supplyChain:ItemDescription>
+        <supplyChain:LineItemInsurance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.44</supplyChain:LineItemInsurance>
+        <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</supplyChain:LineItemQuantity>
+        <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">316.5</supplyChain:LineItemValue>
+        <supplyChain:ManufacturingSite>Micro Labs, Hosur, India</supplyChain:ManufacturingSite>
+        <supplyChain:MoleculeTestType>Sulfadoxine/Pyrimethamine</supplyChain:MoleculeTestType>
+        <supplyChain:PackPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">31.65</supplyChain:PackPrice>
+        <supplyChain:SubClassification>Malaria</supplyChain:SubClassification>
+        <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.03</supplyChain:UnitPrice>
+        <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1000</supplyChain:UnitofMeasure>
+        <supplyChain:Weight>See ASN-13412 (ID#:16085)</supplyChain:Weight>
     </owl:NamedIndividual>
     
 
@@ -577,6 +617,22 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ARV1">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ARV"/>
+         <supplyChain:Brand>Generic</supplyChain:Brand>
+    <supplyChain:Dosage>150mg</supplyChain:Dosage>
+    <supplyChain:DosageForm>Tablet</supplyChain:DosageForm>
+    <supplyChain:FirstLineDesignation>Yes</supplyChain:FirstLineDesignation>
+    <supplyChain:FreightCost>16007.06</supplyChain:FreightCost>
+    <supplyChain:ItemDescription>Lamivudine 150mg, tablets, 60 Tabs</supplyChain:ItemDescription>
+    <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">31920</supplyChain:LineItemQuantity>
+    <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">127360.8</supplyChain:LineItemValue>
+    <supplyChain:ManufacturingSite>Ranbaxy, Paonta Shahib, India</supplyChain:ManufacturingSite>
+    <supplyChain:MoleculeTestType>Lamivudine</supplyChain:MoleculeTestType>
+    <supplyChain:PackPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.99</supplyChain:PackPrice>
+    <supplyChain:SubClassification>Adult</supplyChain:SubClassification>
+    <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.07</supplyChain:UnitPrice>
+    <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</supplyChain:UnitofMeasure>
+    <supplyChain:Weight>1855</supplyChain:Weight>
+
     </owl:NamedIndividual>
     
 
@@ -585,9 +641,67 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ARV2">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ARV"/>
+        <supplyChain:Brand>Generic</supplyChain:Brand>
+        <supplyChain:Dosage>30mg</supplyChain:Dosage>
+        <supplyChain:DosageForm>Capsule</supplyChain:DosageForm>
+        <supplyChain:FirstLineDesignation>Yes</supplyChain:FirstLineDesignation>
+        <supplyChain:FreightCost>45450.08</supplyChain:FreightCost>
+        <supplyChain:ItemDescription>Stavudine 30mg, capsules, 60 Caps</supplyChain:ItemDescription>
+        <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">38000</supplyChain:LineItemQuantity>
+        <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">121600</supplyChain:LineItemValue>
+        <supplyChain:ManufacturingSite>Aurobindo Unit III, India</supplyChain:ManufacturingSite>
+        <supplyChain:MoleculeTestType>Stavudine</supplyChain:MoleculeTestType>
+        <supplyChain:PackPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.2</supplyChain:PackPrice>
+        <supplyChain:SubClassification>Adult</supplyChain:SubClassification>
+        <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.05</supplyChain:UnitPrice>
+        <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</supplyChain:UnitofMeasure>
+        <supplyChain:Weight>7590</supplyChain:Weight>
+    </owl:NamedIndividual>
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ARV3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ARV3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ARV"/>
+         <supplyChain:Brand>Generic</supplyChain:Brand>
+        <supplyChain:Dosage>30mg</supplyChain:Dosage>
+        <supplyChain:DosageForm>Capsule</supplyChain:DosageForm>
+        <supplyChain:FirstLineDesignation>Yes</supplyChain:FirstLineDesignation>
+        <supplyChain:FreightCost>45450.08</supplyChain:FreightCost>
+        <supplyChain:ItemDescription>Stavudine 30mg, capsules, 60 Caps</supplyChain:ItemDescription>
+        <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">38000</supplyChain:LineItemQuantity>
+        <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">121600</supplyChain:LineItemValue>
+        <supplyChain:ManufacturingSite>Aurobindo Unit III, India</supplyChain:ManufacturingSite>
+        <supplyChain:MoleculeTestType>Stavudine</supplyChain:MoleculeTestType>
+        <supplyChain:PackPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.2</supplyChain:PackPrice>
+        <supplyChain:SubClassification>Adult</supplyChain:SubClassification>
+        <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.05</supplyChain:UnitPrice>
+        <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</supplyChain:UnitofMeasure>
+        <supplyChain:Weight>7590</supplyChain:Weight>
     </owl:NamedIndividual>
     
+  <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ARV4 -->
 
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ARV4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ARV"/>
+         <supplyChain:Brand>Generic</supplyChain:Brand>
+    <supplyChain:Dosage>50mg</supplyChain:Dosage>
+    <supplyChain:DosageForm>Capsule</supplyChain:DosageForm>
+    <supplyChain:FirstLineDesignation>Yes</supplyChain:FirstLineDesignation>
+    <supplyChain:FreightCost>6811.39</supplyChain:FreightCost>
+    <supplyChain:ItemDescription>Efavirenz 50mg, capsule, 30 Caps</supplyChain:ItemDescription>
+    <supplyChain:LineItemInsurance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.79</supplyChain:LineItemInsurance>
+    <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1092</supplyChain:LineItemQuantity>
+    <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2446.08</supplyChain:LineItemValue>
+    <supplyChain:ManufacturingSite>Aurobindo Unit III, India</supplyChain:ManufacturingSite>
+    <supplyChain:MoleculeTestType>Efavirenz</supplyChain:MoleculeTestType>
+    <supplyChain:PackPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.24</supplyChain:PackPrice>
+    <supplyChain:SubClassification>Pediatric</supplyChain:SubClassification>
+    <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.07</supplyChain:UnitPrice>
+    <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</supplyChain:UnitofMeasure>
+    <supplyChain:Weight>1585</supplyChain:Weight>
+
+         </owl:NamedIndividual>
 
     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#CI -->
 
@@ -598,11 +712,25 @@
     
 
 
-    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HRDT1 -->
+ <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HRDT1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HRDT1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HRDT"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ACT"/>
         <supplyChain:Brand>Reveal</supplyChain:Brand>
+        <supplyChain:Dosage>N/A</supplyChain:Dosage>
+        <supplyChain:DosageForm>Test kit</supplyChain:DosageForm>
+        <supplyChain:FirstLineDesignation>Yes</supplyChain:FirstLineDesignation>
+        <supplyChain:FreightCost>780.34</supplyChain:FreightCost>
+        <supplyChain:ItemDescription>HIV, Reveal G3 Rapid HIV-1 Antibody Test, 30 Tests</supplyChain:ItemDescription>
+        <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</supplyChain:LineItemQuantity>
+        <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">551</supplyChain:LineItemValue>
+        <supplyChain:ManufacturingSite>Ranbaxy Fine Chemicals LTD</supplyChain:ManufacturingSite>
+        <supplyChain:MoleculeTestType>HIV, Reveal G3 Rapid HIV-1 Antibody Test</supplyChain:MoleculeTestType>
+        <supplyChain:PackPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.0</supplyChain:PackPrice>
+        <supplyChain:SubClassification>HIV test</supplyChain:SubClassification>
+        <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.97</supplyChain:UnitPrice>
+        <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</supplyChain:UnitofMeasure>
+        <supplyChain:Weight>13.0</supplyChain:Weight>
     </owl:NamedIndividual>
     
 
@@ -619,6 +747,15 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HRDT3">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HRDT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#country"/>
+        <supplyChain:Country>Haiti</supplyChain:Country>
     </owl:NamedIndividual>
     
 
@@ -674,25 +811,15 @@
     
 
 
-    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#product1 -->
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ3 -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#product1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ACT"/>
-        <supplyChain:Brand>Reveal</supplyChain:Brand>
-        <supplyChain:Dosage>N/A</supplyChain:Dosage>
-        <supplyChain:DosageForm>Test kit</supplyChain:DosageForm>
-        <supplyChain:FirstLineDesignation>Yes</supplyChain:FirstLineDesignation>
-        <supplyChain:FreightCost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">780.34</supplyChain:FreightCost>
-        <supplyChain:ItemDescription>HIV, Reveal G3 Rapid HIV-1 Antibody Test, 30 Tests</supplyChain:ItemDescription>
-        <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</supplyChain:LineItemQuantity>
-        <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">551</supplyChain:LineItemValue>
-        <supplyChain:ManufacturingSite>Ranbaxy Fine Chemicals LTD</supplyChain:ManufacturingSite>
-        <supplyChain:MoleculeTestType>HIV, Reveal G3 Rapid HIV-1 Antibody Test</supplyChain:MoleculeTestType>
-        <supplyChain:PackPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.0</supplyChain:PackPrice>
-        <supplyChain:SubClassification>HIV test</supplyChain:SubClassification>
-        <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.97</supplyChain:UnitPrice>
-        <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</supplyChain:UnitofMeasure>
-        <supplyChain:Weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.0</supplyChain:Weight>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
+        <supplyChain:POSentToVendorDate>12/30/11</supplyChain:POSentToVendorDate>
+        <supplyChain:PQFirstSenttoClientDate>2012/7/11</supplyChain:PQFirstSenttoClientDate>
+        <supplyChain:PqNumber>FPQ-8635</supplyChain:PqNumber>
+        <ASN:DNNumber>ASN-13412</ASN:DNNumber>
+        <PO:SONumber>SCMS-132180</PO:SONumber>
     </owl:NamedIndividual>
     
 
@@ -703,7 +830,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project"/>
         <supplyChain:hasCountry rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#CI"/>
         <supplyChain:hasPQ rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ1"/>
-        <supplyChain:hasProduct rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ACT1"/>
+        <supplyChain:hasProduct rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HRDT1"/>
         <supplyChain:hasShipment rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment1"/>
         <supplyChain:hasVendor rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor1"/>
         <supplyChain:ManagedBy>PMO - US</supplyChain:ManagedBy>
@@ -725,6 +852,22 @@
         <supplyChain:ManagedBy>PMO - US</supplyChain:ManagedBy>
         <supplyChain:ProjectCode>112-NG-T01</supplyChain:ProjectCode>
         <supplyChain:ProjectID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">630</supplyChain:ProjectID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project"/>
+        <supplyChain:hasCountry rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HT"/>
+        <supplyChain:hasPQ rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ3"/>
+        <supplyChain:hasProduct rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ANTM2"/>
+        <supplyChain:hasShipment rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment3"/>
+        <supplyChain:hasVendor rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor3"/>
+        <supplyChain:ManagedBy>PMO - US</supplyChain:ManagedBy>
+        <supplyChain:ProjectCode>122-HT-T30</supplyChain:ProjectCode>
+        <supplyChain:ProjectID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40351</supplyChain:ProjectID>
     </owl:NamedIndividual>
     
 
@@ -755,6 +898,19 @@
     
 
 
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
+        <supplyChain:DeliveredToClientDate>2012/1/18</supplyChain:DeliveredToClientDate>
+        <supplyChain:DeliveryRecordedDate>2012/1/18</supplyChain:DeliveryRecordedDate>
+        <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
+        <supplyChain:ScheduledDeliveryDate>2012/1/18</supplyChain:ScheduledDeliveryDate>
+        <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor1">
@@ -768,6 +924,16 @@
     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor2 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
+        <supplyChain:Vendor>IDA FOUNDATION</supplyChain:Vendor>
+        <supplyChain:VendorINCOTerm>EXW</supplyChain:VendorINCOTerm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor3">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
         <supplyChain:Vendor>IDA FOUNDATION</supplyChain:Vendor>
         <supplyChain:VendorINCOTerm>EXW</supplyChain:VendorINCOTerm>
