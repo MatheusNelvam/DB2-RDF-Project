@@ -1,0 +1,27 @@
+##Find Projects with Products Supplied by Vendors from Multiple Countries and Multiple PQ Supply Chains:
+
+SELECT ?project
+WHERE {
+    ?project <http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#hasProduct> ?product.
+    ?product <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor>.
+    ?product <http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#suppliedFrom> ?vendorCountry.
+    ?project <http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#hasPQ> ?pqSupplyChain.
+}
+GROUP BY ?project
+HAVING (COUNT(DISTINCT ?vendorCountry) > 1) && (COUNT(DISTINCT ?pqSupplyChain) > 1)
+
+
+#######
+
+Identify Countries with Projects Having Diverse PQ Supply Chains and Products:
+
+SELECT ?country
+WHERE {
+    ?project <http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#hasCountry> ?country.
+    ?project <http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#hasPQ> ?pqSupplyChain.
+    ?project <http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#hasProduct> ?product.
+}
+GROUP BY ?country
+HAVING (COUNT(DISTINCT ?pqSupplyChain) > 1) && (COUNT(DISTINCT ?product) > 1)
+
+#######
