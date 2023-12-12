@@ -41,6 +41,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PackPrice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PackPrice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#product"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#hasCountry -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#hasCountry">
@@ -266,10 +274,7 @@
 
     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PackPrice -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PackPrice">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#product"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#decimal"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PackPrice"/>
     
 
 
@@ -515,7 +520,9 @@
      -->
 
     
-<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ACT1 -->
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ACT1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ACT1">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ACT"/>
@@ -535,9 +542,7 @@
         <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.03</supplyChain:UnitPrice>
         <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</supplyChain:UnitofMeasure>
         <supplyChain:Weight>1708.00</supplyChain:Weight>
- </owl:NamedIndividual>
-
-   
+    </owl:NamedIndividual>
     
 
 
@@ -561,6 +566,15 @@
         <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.08</supplyChain:UnitPrice>
         <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">540</supplyChain:UnitofMeasure>
         <supplyChain:Weight>115</supplyChain:Weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#AF -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#AF">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#country"/>
+        <supplyChain:Country>Afghanistan</supplyChain:Country>
     </owl:NamedIndividual>
     
 
@@ -617,22 +631,21 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ARV1">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ARV"/>
-         <supplyChain:Brand>Generic</supplyChain:Brand>
-    <supplyChain:Dosage>150mg</supplyChain:Dosage>
-    <supplyChain:DosageForm>Tablet</supplyChain:DosageForm>
-    <supplyChain:FirstLineDesignation>Yes</supplyChain:FirstLineDesignation>
-    <supplyChain:FreightCost>16007.06</supplyChain:FreightCost>
-    <supplyChain:ItemDescription>Lamivudine 150mg, tablets, 60 Tabs</supplyChain:ItemDescription>
-    <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">31920</supplyChain:LineItemQuantity>
-    <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">127360.8</supplyChain:LineItemValue>
-    <supplyChain:ManufacturingSite>Ranbaxy, Paonta Shahib, India</supplyChain:ManufacturingSite>
-    <supplyChain:MoleculeTestType>Lamivudine</supplyChain:MoleculeTestType>
-    <supplyChain:PackPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.99</supplyChain:PackPrice>
-    <supplyChain:SubClassification>Adult</supplyChain:SubClassification>
-    <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.07</supplyChain:UnitPrice>
-    <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</supplyChain:UnitofMeasure>
-    <supplyChain:Weight>1855</supplyChain:Weight>
-
+        <supplyChain:Brand>Generic</supplyChain:Brand>
+        <supplyChain:Dosage>150mg</supplyChain:Dosage>
+        <supplyChain:DosageForm>Tablet</supplyChain:DosageForm>
+        <supplyChain:FirstLineDesignation>Yes</supplyChain:FirstLineDesignation>
+        <supplyChain:FreightCost>16007.06</supplyChain:FreightCost>
+        <supplyChain:ItemDescription>Lamivudine 150mg, tablets, 60 Tabs</supplyChain:ItemDescription>
+        <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">31920</supplyChain:LineItemQuantity>
+        <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">127360.8</supplyChain:LineItemValue>
+        <supplyChain:ManufacturingSite>Ranbaxy, Paonta Shahib, India</supplyChain:ManufacturingSite>
+        <supplyChain:MoleculeTestType>Lamivudine</supplyChain:MoleculeTestType>
+        <supplyChain:PackPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.99</supplyChain:PackPrice>
+        <supplyChain:SubClassification>Adult</supplyChain:SubClassification>
+        <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.07</supplyChain:UnitPrice>
+        <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</supplyChain:UnitofMeasure>
+        <supplyChain:Weight>1855</supplyChain:Weight>
     </owl:NamedIndividual>
     
 
@@ -657,13 +670,14 @@
         <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</supplyChain:UnitofMeasure>
         <supplyChain:Weight>7590</supplyChain:Weight>
     </owl:NamedIndividual>
+    
 
 
     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ARV3 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ARV3">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ARV"/>
-         <supplyChain:Brand>Generic</supplyChain:Brand>
+        <supplyChain:Brand>Generic</supplyChain:Brand>
         <supplyChain:Dosage>30mg</supplyChain:Dosage>
         <supplyChain:DosageForm>Capsule</supplyChain:DosageForm>
         <supplyChain:FirstLineDesignation>Yes</supplyChain:FirstLineDesignation>
@@ -680,28 +694,31 @@
         <supplyChain:Weight>7590</supplyChain:Weight>
     </owl:NamedIndividual>
     
-  <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ARV4 -->
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ARV4 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ARV4">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#ARV"/>
-         <supplyChain:Brand>Generic</supplyChain:Brand>
-    <supplyChain:Dosage>50mg</supplyChain:Dosage>
-    <supplyChain:DosageForm>Capsule</supplyChain:DosageForm>
-    <supplyChain:FirstLineDesignation>Yes</supplyChain:FirstLineDesignation>
-    <supplyChain:FreightCost>6811.39</supplyChain:FreightCost>
-    <supplyChain:ItemDescription>Efavirenz 50mg, capsule, 30 Caps</supplyChain:ItemDescription>
-    <supplyChain:LineItemInsurance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.79</supplyChain:LineItemInsurance>
-    <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1092</supplyChain:LineItemQuantity>
-    <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2446.08</supplyChain:LineItemValue>
-    <supplyChain:ManufacturingSite>Aurobindo Unit III, India</supplyChain:ManufacturingSite>
-    <supplyChain:MoleculeTestType>Efavirenz</supplyChain:MoleculeTestType>
-    <supplyChain:PackPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.24</supplyChain:PackPrice>
-    <supplyChain:SubClassification>Pediatric</supplyChain:SubClassification>
-    <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.07</supplyChain:UnitPrice>
-    <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</supplyChain:UnitofMeasure>
-    <supplyChain:Weight>1585</supplyChain:Weight>
+        <supplyChain:Brand>Generic</supplyChain:Brand>
+        <supplyChain:Dosage>50mg</supplyChain:Dosage>
+        <supplyChain:DosageForm>Capsule</supplyChain:DosageForm>
+        <supplyChain:FirstLineDesignation>Yes</supplyChain:FirstLineDesignation>
+        <supplyChain:FreightCost>6811.39</supplyChain:FreightCost>
+        <supplyChain:ItemDescription>Efavirenz 50mg, capsule, 30 Caps</supplyChain:ItemDescription>
+        <supplyChain:LineItemInsurance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.79</supplyChain:LineItemInsurance>
+        <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1092</supplyChain:LineItemQuantity>
+        <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2446.08</supplyChain:LineItemValue>
+        <supplyChain:ManufacturingSite>Aurobindo Unit III, India</supplyChain:ManufacturingSite>
+        <supplyChain:MoleculeTestType>Efavirenz</supplyChain:MoleculeTestType>
+        <supplyChain:PackPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.24</supplyChain:PackPrice>
+        <supplyChain:SubClassification>Pediatric</supplyChain:SubClassification>
+        <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.07</supplyChain:UnitPrice>
+        <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</supplyChain:UnitofMeasure>
+        <supplyChain:Weight>1585</supplyChain:Weight>
+    </owl:NamedIndividual>
+    
 
-         </owl:NamedIndividual>
 
     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#CI -->
 
@@ -709,34 +726,19 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#country"/>
         <supplyChain:Country>Côte d&apos;Ivoire</supplyChain:Country>
     </owl:NamedIndividual>
+    
 
-     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#VN -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#VN">
-        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#country"/>
-        <supplyChain:Country>Vietnam</supplyChain:Country>
-    </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#MZ -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#MZ">
-        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#country"/>
-        <supplyChain:Country>Mozambique</supplyChain:Country>
-    </owl:NamedIndividual>
-
- <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#GY -->
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#GY -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#GY">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#country"/>
         <supplyChain:Country>Guyana</supplyChain:Country>
     </owl:NamedIndividual>
-    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#AF -->
+    
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#AF">
-        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#country"/>
-        <supplyChain:Country>Afghanistan</supplyChain:Country>
-    </owl:NamedIndividual>
 
- <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HRDT1 -->
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HRDT1 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HRDT1">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HRDT"/>
@@ -850,7 +852,7 @@
         <supplyChain:FirstLineDesignation>Yes</supplyChain:FirstLineDesignation>
         <supplyChain:FreightCost>Freight Included in Commodity Cost</supplyChain:FreightCost>
         <supplyChain:ItemDescription>Malaria Paramax-3 Kit, 25 Tests</supplyChain:ItemDescription>
-        <supplyChain:LineItemInsurance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal" >7.94</supplyChain:LineItemInsurance>
+        <supplyChain:LineItemInsurance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.94</supplyChain:LineItemInsurance>
         <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">108</supplyChain:LineItemQuantity>
         <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4050.0</supplyChain:LineItemValue>
         <supplyChain:ManufacturingSite>Not Applicable</supplyChain:ManufacturingSite>
@@ -860,6 +862,15 @@
         <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.5</supplyChain:UnitPrice>
         <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</supplyChain:UnitofMeasure>
         <supplyChain:Weight>Weight Captured Separately</supplyChain:Weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#MZ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#MZ">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#country"/>
+        <supplyChain:Country>Mozambique</supplyChain:Country>
     </owl:NamedIndividual>
     
 
@@ -882,6 +893,58 @@
         <supplyChain:PqNumber>number</supplyChain:PqNumber>
         <ASN:DNNumber>ASN-8</ASN:DNNumber>
         <PO:SONumber>SCMS-4</PO:SONumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
+        <supplyChain:POSentToVendorDate>8/29/08</supplyChain:POSentToVendorDate>
+        <supplyChain:PQFirstSenttoClientDate>Pre-PQ Process</supplyChain:PQFirstSenttoClientDate>
+        <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
+        <ASN:DNNumber>ASN-3047</ASN:DNNumber>
+        <PO:SONumber>SCMS-29460</PO:SONumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
+        <supplyChain:POSentToVendorDate>8/29/08</supplyChain:POSentToVendorDate>
+        <supplyChain:PQFirstSenttoClientDate>Pre-PQ Process</supplyChain:PQFirstSenttoClientDate>
+        <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
+        <ASN:DNNumber>ASN-2403</ASN:DNNumber>
+        <PO:SONumber>SCMS-29440</PO:SONumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
+        <supplyChain:POSentToVendorDate>7/28/08</supplyChain:POSentToVendorDate>
+        <supplyChain:PQFirstSenttoClientDate>Pre-PQ Process</supplyChain:PQFirstSenttoClientDate>
+        <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
+        <ASN:DNNumber>ASN-2910</ASN:DNNumber>
+        <PO:SONumber>SCMS-27680</PO:SONumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
+        <supplyChain:POSentToVendorDate>11/19/08</supplyChain:POSentToVendorDate>
+        <supplyChain:PQFirstSenttoClientDate>Pre-PQ Process</supplyChain:PQFirstSenttoClientDate>
+        <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
+        <ASN:DNNumber>ASN-3423</ASN:DNNumber>
+        <PO:SONumber>SCMS-33940</PO:SONumber>
     </owl:NamedIndividual>
     
 
@@ -910,113 +973,93 @@
         <PO:SONumber>SCMS-132180</PO:SONumber>
     </owl:NamedIndividual>
     
-    
+
+
     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ4 -->
+
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ4">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
-    <supplyChain:POSentToVendorDate>2009/3/8</supplyChain:POSentToVendorDate>
-    <supplyChain:PQFirstSenttoClientDate>Pre-PQ Process</supplyChain:PQFirstSenttoClientDate>
-    <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
-    <ASN:DNNumber>ASN-2921</ASN:DNNumber>
-    <PO:SONumber>SCMS-29340</PO:SONumber>
-</owl:NamedIndividual>
-
-        <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ5 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ5">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
-    <supplyChain:POSentToVendorDate>2002/9/15</supplyChain:POSentToVendorDate>
-    <supplyChain:PQFirstSenttoClientDate>1/20/15</supplyChain:PQFirstSenttoClientDate>
-    <supplyChain:PqNumber>FPQ-15746</supplyChain:PqNumber>
-    <ASN:DNNumber>ASN-30861</ASN:DNNumber>
-    <PO:SONumber>SCMS-275090</PO:SONumber>
-</owl:NamedIndividual>
-
-        <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ6 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ6">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
-    <supplyChain:POSentToVendorDate>Date Not Captured</supplyChain:POSentToVendorDate>
-    <supplyChain:PQFirstSenttoClientDate>Pre-PQ Process</supplyChain:PQFirstSenttoClientDate>
-    <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
-    <ASN:DNNumber>ASN-50</ASN:DNNumber>
-    <PO:SONumber>SCMS-78</PO:SONumber>
-</owl:NamedIndividual>
-
-        <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ7 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ7">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
-    <supplyChain:POSentToVendorDate>Date Not Captured</supplyChain:POSentToVendorDate>
-    <supplyChain:PQFirstSenttoClientDate>Pre-PQ Process</supplyChain:PQFirstSenttoClientDate>
-    <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
-    <ASN:DNNumber>ASN-55</ASN:DNNumber>
-    <PO:SONumber>SCMS-81</PO:SONumber>
-</owl:NamedIndividual>
-
-        <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ8 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ8">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
-    <supplyChain:POSentToVendorDate>N/A - From RDC</supplyChain:POSentToVendorDate>
-    <supplyChain:PQFirstSenttoClientDate>Date Not Captured</supplyChain:PQFirstSenttoClientDate>
-    <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
-    <ASN:DNNumber>DN-1373</ASN:DNNumber>
-    <PO:SONumber>SO-32760</PO:SONumber>
-</owl:NamedIndividual>
-
-        <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ9 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ9">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
-    <supplyChain:POSentToVendorDate>N/A - From RDC</supplyChain:POSentToVendorDate>
-    <supplyChain:PQFirstSenttoClientDate>Date Not Captured</supplyChain:PQFirstSenttoClientDate>
-    <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
-    <ASN:DNNumber>DN-1373</ASN:DNNumber>
-    <PO:SONumber>SO-32760</PO:SONumber>
-</owl:NamedIndividual>
-
-        <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ10 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ10">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
-    <supplyChain:POSentToVendorDate>8/29/08</supplyChain:POSentToVendorDate>
-    <supplyChain:PQFirstSenttoClientDate>Pre-PQ Process</supplyChain:PQFirstSenttoClientDate>
-    <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
-    <ASN:DNNumber>ASN-3047</ASN:DNNumber>
-    <PO:SONumber>SCMS-29460</PO:SONumber>
-</owl:NamedIndividual>
-
-        <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ11 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ11">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
-    <supplyChain:POSentToVendorDate>8/29/08</supplyChain:POSentToVendorDate>
-    <supplyChain:PQFirstSenttoClientDate>Pre-PQ Process</supplyChain:PQFirstSenttoClientDate>
-    <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
-    <ASN:DNNumber>ASN-2403</ASN:DNNumber>
-    <PO:SONumber>SCMS-29440</PO:SONumber>
-</owl:NamedIndividual>
-
-        <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ12 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ12">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
-    <supplyChain:POSentToVendorDate>7/28/08</supplyChain:POSentToVendorDate>
-    <supplyChain:PQFirstSenttoClientDate>Pre-PQ Process</supplyChain:PQFirstSenttoClientDate>
-    <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
-    <ASN:DNNumber>ASN-2910</ASN:DNNumber>
-    <PO:SONumber>SCMS-27680</PO:SONumber>
-</owl:NamedIndividual>
-
-        <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ13 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ13">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
-    <supplyChain:POSentToVendorDate>11/19/08</supplyChain:POSentToVendorDate>
-    <supplyChain:PQFirstSenttoClientDate>Pre-PQ Process</supplyChain:PQFirstSenttoClientDate>
-    <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
-    <ASN:DNNumber>ASN-3423</ASN:DNNumber>
-    <PO:SONumber>SCMS-33940</PO:SONumber>
-</owl:NamedIndividual>
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
+        <supplyChain:POSentToVendorDate>2009/3/8</supplyChain:POSentToVendorDate>
+        <supplyChain:PQFirstSenttoClientDate>Pre-PQ Process</supplyChain:PQFirstSenttoClientDate>
+        <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
+        <ASN:DNNumber>ASN-2921</ASN:DNNumber>
+        <PO:SONumber>SCMS-29340</PO:SONumber>
+    </owl:NamedIndividual>
+    
 
 
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
+        <supplyChain:POSentToVendorDate>2002/9/15</supplyChain:POSentToVendorDate>
+        <supplyChain:PQFirstSenttoClientDate>1/20/15</supplyChain:PQFirstSenttoClientDate>
+        <supplyChain:PqNumber>FPQ-15746</supplyChain:PqNumber>
+        <ASN:DNNumber>ASN-30861</ASN:DNNumber>
+        <PO:SONumber>SCMS-275090</PO:SONumber>
+    </owl:NamedIndividual>
+    
 
 
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
+        <supplyChain:POSentToVendorDate>Date Not Captured</supplyChain:POSentToVendorDate>
+        <supplyChain:PQFirstSenttoClientDate>Pre-PQ Process</supplyChain:PQFirstSenttoClientDate>
+        <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
+        <ASN:DNNumber>ASN-50</ASN:DNNumber>
+        <PO:SONumber>SCMS-78</PO:SONumber>
+    </owl:NamedIndividual>
+    
 
 
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ7 -->
 
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
+        <supplyChain:POSentToVendorDate>Date Not Captured</supplyChain:POSentToVendorDate>
+        <supplyChain:PQFirstSenttoClientDate>Pre-PQ Process</supplyChain:PQFirstSenttoClientDate>
+        <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
+        <ASN:DNNumber>ASN-55</ASN:DNNumber>
+        <PO:SONumber>SCMS-81</PO:SONumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
+        <supplyChain:POSentToVendorDate>N/A - From RDC</supplyChain:POSentToVendorDate>
+        <supplyChain:PQFirstSenttoClientDate>Date Not Captured</supplyChain:PQFirstSenttoClientDate>
+        <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
+        <ASN:DNNumber>DN-1373</ASN:DNNumber>
+        <PO:SONumber>SO-32760</PO:SONumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
+        <supplyChain:POSentToVendorDate>N/A - From RDC</supplyChain:POSentToVendorDate>
+        <supplyChain:PQFirstSenttoClientDate>Date Not Captured</supplyChain:PQFirstSenttoClientDate>
+        <supplyChain:PqNumber>Pre-PQ Process</supplyChain:PqNumber>
+        <ASN:DNNumber>DN-1373</ASN:DNNumber>
+        <PO:SONumber>SO-32760</PO:SONumber>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#VN -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#VN">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#country"/>
+        <supplyChain:Country>Vietnam</supplyChain:Country>
+    </owl:NamedIndividual>
+    
 
 
     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project1 -->
@@ -1031,6 +1074,70 @@
         <supplyChain:ManagedBy>PMO - US</supplyChain:ManagedBy>
         <supplyChain:ProjectCode>100-CI-T01</supplyChain:ProjectCode>
         <supplyChain:ProjectID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</supplyChain:ProjectID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project"/>
+        <supplyChain:hasCountry rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#MZ"/>
+        <supplyChain:hasPQ rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ10"/>
+        <supplyChain:hasProduct rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HRDT2"/>
+        <supplyChain:hasShipment rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment10"/>
+        <supplyChain:hasVendor rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor10"/>
+        <supplyChain:ManagedBy>PMO - US</supplyChain:ManagedBy>
+        <supplyChain:ProjectCode>111-MZ-T01</supplyChain:ProjectCode>
+        <supplyChain:ProjectID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3378</supplyChain:ProjectID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project"/>
+        <supplyChain:hasCountry rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#MZ"/>
+        <supplyChain:hasPQ rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ11"/>
+        <supplyChain:hasProduct rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HRDT2"/>
+        <supplyChain:hasShipment rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment11"/>
+        <supplyChain:hasVendor rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor11"/>
+        <supplyChain:ManagedBy>PMO - US</supplyChain:ManagedBy>
+        <supplyChain:ProjectCode>111-MZ-T01</supplyChain:ProjectCode>
+        <supplyChain:ProjectID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3386</supplyChain:ProjectID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project"/>
+        <supplyChain:hasCountry rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#GY"/>
+        <supplyChain:hasPQ rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ12"/>
+        <supplyChain:hasProduct rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#MRDT1"/>
+        <supplyChain:hasShipment rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment12"/>
+        <supplyChain:hasVendor rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor12"/>
+        <supplyChain:ManagedBy>PMO - US</supplyChain:ManagedBy>
+        <supplyChain:ProjectCode>102-GY-T01</supplyChain:ProjectCode>
+        <supplyChain:ProjectID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3386</supplyChain:ProjectID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project"/>
+        <supplyChain:hasCountry rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#GY"/>
+        <supplyChain:hasPQ rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ13"/>
+        <supplyChain:hasProduct rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#MRDT2"/>
+        <supplyChain:hasShipment rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment13"/>
+        <supplyChain:hasVendor rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor13"/>
+        <supplyChain:ManagedBy>PMO - US</supplyChain:ManagedBy>
+        <supplyChain:ProjectCode>102-GY-T01</supplyChain:ProjectCode>
+        <supplyChain:ProjectID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3386</supplyChain:ProjectID>
     </owl:NamedIndividual>
     
 
@@ -1064,8 +1171,10 @@
         <supplyChain:ProjectCode>122-HT-T30</supplyChain:ProjectCode>
         <supplyChain:ProjectID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40351</supplyChain:ProjectID>
     </owl:NamedIndividual>
-       
-       <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project4 -->
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project4 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project4">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project"/>
@@ -1077,10 +1186,11 @@
         <supplyChain:ManagedBy>PMO - US</supplyChain:ManagedBy>
         <supplyChain:ProjectCode>104-CI-T01</supplyChain:ProjectCode>
         <supplyChain:ProjectID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">719</supplyChain:ProjectID>
-    </owl:NamedIndividual> 
+    </owl:NamedIndividual>
+    
 
 
-     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project5 -->
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project5 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project5">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project"/>
@@ -1092,9 +1202,11 @@
         <supplyChain:ManagedBy>PMO - US</supplyChain:ManagedBy>
         <supplyChain:ProjectCode>101-AF-T30</supplyChain:ProjectCode>
         <supplyChain:ProjectID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">41328</supplyChain:ProjectID>
-    </owl:NamedIndividual> 
+    </owl:NamedIndividual>
+    
 
- <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project6 -->
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project6 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project6">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project"/>
@@ -1106,10 +1218,11 @@
         <supplyChain:ManagedBy>PMO - US</supplyChain:ManagedBy>
         <supplyChain:ProjectCode>108-VN-T01</supplyChain:ProjectCode>
         <supplyChain:ProjectID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</supplyChain:ProjectID>
-    </owl:NamedIndividual> 
+    </owl:NamedIndividual>
+    
 
 
- <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project7 -->
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project7 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project7">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project"/>
@@ -1121,9 +1234,11 @@
         <supplyChain:ManagedBy>PMO - US</supplyChain:ManagedBy>
         <supplyChain:ProjectCode>108-VN-T01</supplyChain:ProjectCode>
         <supplyChain:ProjectID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16</supplyChain:ProjectID>
-    </owl:NamedIndividual> 
+    </owl:NamedIndividual>
+    
 
- <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project8 -->
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project8 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project8">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project"/>
@@ -1135,11 +1250,11 @@
         <supplyChain:ManagedBy>PMO - US</supplyChain:ManagedBy>
         <supplyChain:ProjectCode>106-HT-T01</supplyChain:ProjectCode>
         <supplyChain:ProjectID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11062</supplyChain:ProjectID>
-    </owl:NamedIndividual> 
+    </owl:NamedIndividual>
+    
 
 
-
- <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project9 -->
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project9 -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project9">
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project"/>
@@ -1151,65 +1266,9 @@
         <supplyChain:ManagedBy>PMO - US</supplyChain:ManagedBy>
         <supplyChain:ProjectCode>106-HT-T01</supplyChain:ProjectCode>
         <supplyChain:ProjectID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11063</supplyChain:ProjectID>
-    </owl:NamedIndividual> 
+    </owl:NamedIndividual>
+    
 
-
- <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project10 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project10">
-        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project"/>
-        <supplyChain:hasCountry rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#MZ"/>
-        <supplyChain:hasPQ rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ10"/>
-        <supplyChain:hasProduct rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HRDT2"/>
-        <supplyChain:hasShipment rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment10"/>
-        <supplyChain:hasVendor rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor10"/>
-        <supplyChain:ManagedBy>PMO - US</supplyChain:ManagedBy>
-        <supplyChain:ProjectCode>111-MZ-T01</supplyChain:ProjectCode>
-        <supplyChain:ProjectID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3378</supplyChain:ProjectID>
-    </owl:NamedIndividual> 
-
-<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project11 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project11">
-        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project"/>
-        <supplyChain:hasCountry rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#MZ"/>
-        <supplyChain:hasPQ rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ11"/>
-        <supplyChain:hasProduct rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#HRDT2"/>
-        <supplyChain:hasShipment rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment11"/>
-        <supplyChain:hasVendor rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor11"/>
-        <supplyChain:ManagedBy>PMO - US</supplyChain:ManagedBy>
-        <supplyChain:ProjectCode>111-MZ-T01</supplyChain:ProjectCode>
-        <supplyChain:ProjectID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3386</supplyChain:ProjectID>
-    </owl:NamedIndividual> 
-
-
-<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project12 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project12">
-        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project"/>
-        <supplyChain:hasCountry rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#GY"/>
-        <supplyChain:hasPQ rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ12"/>
-        <supplyChain:hasProduct rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#MRDT1"/>
-        <supplyChain:hasShipment rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment12"/>
-        <supplyChain:hasVendor rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor12"/>
-        <supplyChain:ManagedBy>PMO - US</supplyChain:ManagedBy>
-        <supplyChain:ProjectCode>102-GY-T01</supplyChain:ProjectCode>
-        <supplyChain:ProjectID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3386</supplyChain:ProjectID>
-    </owl:NamedIndividual> 
-
-<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project13 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project13">
-        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#project"/>
-        <supplyChain:hasCountry rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#GY"/>
-        <supplyChain:hasPQ rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQ13"/>
-        <supplyChain:hasProduct rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#MRDT2"/>
-        <supplyChain:hasShipment rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment13"/>
-        <supplyChain:hasVendor rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor13"/>
-        <supplyChain:ManagedBy>PMO - US</supplyChain:ManagedBy>
-        <supplyChain:ProjectCode>102-GY-T01</supplyChain:ProjectCode>
-        <supplyChain:ProjectID rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3386</supplyChain:ProjectID>
-    </owl:NamedIndividual> 
 
     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment1 -->
 
@@ -1219,6 +1278,58 @@
         <supplyChain:DeliveryRecordedDate>2006/6/2</supplyChain:DeliveryRecordedDate>
         <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
         <supplyChain:ScheduledDeliveryDate>2006/6/2</supplyChain:ScheduledDeliveryDate>
+        <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
+        <supplyChain:DeliveredToClientDate>2008/10/3</supplyChain:DeliveredToClientDate>
+        <supplyChain:DeliveryRecordedDate>2008/10/3</supplyChain:DeliveryRecordedDate>
+        <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
+        <supplyChain:ScheduledDeliveryDate>2008/10/3</supplyChain:ScheduledDeliveryDate>
+        <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
+        <supplyChain:DeliveredToClientDate>2008/12/15</supplyChain:DeliveredToClientDate>
+        <supplyChain:DeliveryRecordedDate>2008/12/15</supplyChain:DeliveryRecordedDate>
+        <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
+        <supplyChain:ScheduledDeliveryDate>2008/12/15</supplyChain:ScheduledDeliveryDate>
+        <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
+        <supplyChain:DeliveredToClientDate>2009/3/6</supplyChain:DeliveredToClientDate>
+        <supplyChain:DeliveryRecordedDate>2009/3/6</supplyChain:DeliveryRecordedDate>
+        <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
+        <supplyChain:ScheduledDeliveryDate>2009/3/6</supplyChain:ScheduledDeliveryDate>
+        <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
+        <supplyChain:DeliveredToClientDate>2006/9/1</supplyChain:DeliveredToClientDate>
+        <supplyChain:DeliveryRecordedDate>2006/9/1</supplyChain:DeliveryRecordedDate>
+        <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
+        <supplyChain:ScheduledDeliveryDate>2006/9/1</supplyChain:ScheduledDeliveryDate>
         <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
     </owl:NamedIndividual>
     
@@ -1247,107 +1358,85 @@
         <supplyChain:ScheduledDeliveryDate>2012/1/18</supplyChain:ScheduledDeliveryDate>
         <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
     </owl:NamedIndividual>
-<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment4 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment4">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
-    <supplyChain:DeliveredToClientDate>2009/1/23</supplyChain:DeliveredToClientDate>
-    <supplyChain:DeliveryRecordedDate>2009/1/23</supplyChain:DeliveryRecordedDate>
-    <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
-    <supplyChain:ScheduledDeliveryDate>2009/1/23</supplyChain:ScheduledDeliveryDate>
-    <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
-</owl:NamedIndividual>
-
-<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment5 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment5">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
-    <supplyChain:DeliveredToClientDate>2015/7/12</supplyChain:DeliveredToClientDate>
-    <supplyChain:DeliveryRecordedDate>2015/7/13</supplyChain:DeliveryRecordedDate>
-    <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
-    <supplyChain:ScheduledDeliveryDate>2015/7/12</supplyChain:ScheduledDeliveryDate>
-    <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
-</owl:NamedIndividual>
-
-<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment6 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment6">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
-    <supplyChain:DeliveredToClientDate>2006/9/1</supplyChain:DeliveredToClientDate>
-    <supplyChain:DeliveryRecordedDate>2006/9/1</supplyChain:DeliveryRecordedDate>
-    <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
-    <supplyChain:ScheduledDeliveryDate>2006/9/1</supplyChain:ScheduledDeliveryDate>
-    <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
-</owl:NamedIndividual>
-
-<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment7 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment7">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
-    <supplyChain:DeliveredToClientDate>2006/8/11</supplyChain:DeliveredToClientDate>
-    <supplyChain:DeliveryRecordedDate>2006/8/11</supplyChain:DeliveryRecordedDate>
-    <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
-    <supplyChain:ScheduledDeliveryDate>2006/8/11</supplyChain:ScheduledDeliveryDate>
-    <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
-</owl:NamedIndividual>
-
-<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment8 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment8">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
-    <supplyChain:DeliveredToClientDate>2009/7/31</supplyChain:DeliveredToClientDate>
-    <supplyChain:DeliveryRecordedDate>2009/7/31</supplyChain:DeliveryRecordedDate>
-    <supplyChain:FulfillVia>From RDC</supplyChain:FulfillVia>
-    <supplyChain:ScheduledDeliveryDate>2009/7/31</supplyChain:ScheduledDeliveryDate>
-    <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
-</owl:NamedIndividual>
-
-<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment9 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment9">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
-    <supplyChain:DeliveredToClientDate>2009/3/6</supplyChain:DeliveredToClientDate>
-    <supplyChain:DeliveryRecordedDate>2009/3/6</supplyChain:DeliveryRecordedDate>
-    <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
-    <supplyChain:ScheduledDeliveryDate>2009/3/6</supplyChain:ScheduledDeliveryDate>
-    <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
-</owl:NamedIndividual>
-
-<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment10 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment10">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
-    <supplyChain:DeliveredToClientDate>2008/10/3</supplyChain:DeliveredToClientDate>
-    <supplyChain:DeliveryRecordedDate>2008/10/3</supplyChain:DeliveryRecordedDate>
-    <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
-    <supplyChain:ScheduledDeliveryDate>2008/10/3</supplyChain:ScheduledDeliveryDate>
-    <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
-</owl:NamedIndividual>
-
-<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment11-->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment11">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
-    <supplyChain:DeliveredToClientDate>2008/12/15</supplyChain:DeliveredToClientDate>
-    <supplyChain:DeliveryRecordedDate>2008/12/15</supplyChain:DeliveryRecordedDate>
-    <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
-    <supplyChain:ScheduledDeliveryDate>2008/12/15</supplyChain:ScheduledDeliveryDate>
-    <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
-</owl:NamedIndividual>
-
-<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment12 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment12">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
-    <supplyChain:DeliveredToClientDate>2009/3/6</supplyChain:DeliveredToClientDate>
-    <supplyChain:DeliveryRecordedDate>2009/3/6</supplyChain:DeliveryRecordedDate>
-    <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
-    <supplyChain:ScheduledDeliveryDate>2009/3/6</supplyChain:ScheduledDeliveryDate>
-    <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
-</owl:NamedIndividual>
-
-<!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment13 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment13">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
-    <supplyChain:DeliveredToClientDate>2006/9/1</supplyChain:DeliveredToClientDate>
-    <supplyChain:DeliveryRecordedDate>2006/9/1</supplyChain:DeliveryRecordedDate>
-    <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
-    <supplyChain:ScheduledDeliveryDate>2006/9/1</supplyChain:ScheduledDeliveryDate>
-    <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
-</owl:NamedIndividual>
+    
 
 
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
+        <supplyChain:DeliveredToClientDate>2009/1/23</supplyChain:DeliveredToClientDate>
+        <supplyChain:DeliveryRecordedDate>2009/1/23</supplyChain:DeliveryRecordedDate>
+        <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
+        <supplyChain:ScheduledDeliveryDate>2009/1/23</supplyChain:ScheduledDeliveryDate>
+        <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
+        <supplyChain:DeliveredToClientDate>2015/7/12</supplyChain:DeliveredToClientDate>
+        <supplyChain:DeliveryRecordedDate>2015/7/13</supplyChain:DeliveryRecordedDate>
+        <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
+        <supplyChain:ScheduledDeliveryDate>2015/7/12</supplyChain:ScheduledDeliveryDate>
+        <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
+        <supplyChain:DeliveredToClientDate>2006/9/1</supplyChain:DeliveredToClientDate>
+        <supplyChain:DeliveryRecordedDate>2006/9/1</supplyChain:DeliveryRecordedDate>
+        <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
+        <supplyChain:ScheduledDeliveryDate>2006/9/1</supplyChain:ScheduledDeliveryDate>
+        <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
+        <supplyChain:DeliveredToClientDate>2006/8/11</supplyChain:DeliveredToClientDate>
+        <supplyChain:DeliveryRecordedDate>2006/8/11</supplyChain:DeliveryRecordedDate>
+        <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
+        <supplyChain:ScheduledDeliveryDate>2006/8/11</supplyChain:ScheduledDeliveryDate>
+        <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
+        <supplyChain:DeliveredToClientDate>2009/7/31</supplyChain:DeliveredToClientDate>
+        <supplyChain:DeliveryRecordedDate>2009/7/31</supplyChain:DeliveryRecordedDate>
+        <supplyChain:FulfillVia>From RDC</supplyChain:FulfillVia>
+        <supplyChain:ScheduledDeliveryDate>2009/7/31</supplyChain:ScheduledDeliveryDate>
+        <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#shipment"/>
+        <supplyChain:DeliveredToClientDate>2009/3/6</supplyChain:DeliveredToClientDate>
+        <supplyChain:DeliveryRecordedDate>2009/3/6</supplyChain:DeliveryRecordedDate>
+        <supplyChain:FulfillVia>Direct Drop</supplyChain:FulfillVia>
+        <supplyChain:ScheduledDeliveryDate>2009/3/6</supplyChain:ScheduledDeliveryDate>
+        <supplyChain:ShipmentMode>Air</supplyChain:ShipmentMode>
+    </owl:NamedIndividual>
+    
 
 
     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor1 -->
@@ -1356,6 +1445,46 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
         <supplyChain:Vendor>RANBAXY Fine Chemicals LTD.</supplyChain:Vendor>
         <supplyChain:VendorINCOTerm>EXW</supplyChain:VendorINCOTerm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
+        <supplyChain:Vendor>Abbott GmbH  Co. KG</supplyChain:Vendor>
+        <supplyChain:VendorINCOTerm>FCA</supplyChain:VendorINCOTerm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
+        <supplyChain:Vendor>Orgenics, Ltd</supplyChain:Vendor>
+        <supplyChain:VendorINCOTerm>EXW</supplyChain:VendorINCOTerm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
+        <supplyChain:Vendor>ZEPHYR BIOMEDICALS</supplyChain:Vendor>
+        <supplyChain:VendorINCOTerm>EXW</supplyChain:VendorINCOTerm>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
+        <supplyChain:Vendor>ZEPHYR BIOMEDICALS</supplyChain:Vendor>
+        <supplyChain:VendorINCOTerm>CIP</supplyChain:VendorINCOTerm>
     </owl:NamedIndividual>
     
 
@@ -1378,76 +1507,66 @@
         <supplyChain:VendorINCOTerm>EXW</supplyChain:VendorINCOTerm>
     </owl:NamedIndividual>
     
+
+
     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor4 -->
+
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor4">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
-    <supplyChain:Vendor>IDA FOUNDATION</supplyChain:Vendor>
-    <supplyChain:VendorINCOTerm>EXW</supplyChain:VendorINCOTerm>
-</owl:NamedIndividual>
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
+        <supplyChain:Vendor>IDA FOUNDATION</supplyChain:Vendor>
+        <supplyChain:VendorINCOTerm>EXW</supplyChain:VendorINCOTerm>
+    </owl:NamedIndividual>
+    
+
 
     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor5 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor5">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
-    <supplyChain:Vendor>IMRES B.V.</supplyChain:Vendor>
-    <supplyChain:VendorINCOTerm>EXW</supplyChain:VendorINCOTerm>
-</owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
+        <supplyChain:Vendor>IMRES B.V.</supplyChain:Vendor>
+        <supplyChain:VendorINCOTerm>EXW</supplyChain:VendorINCOTerm>
+    </owl:NamedIndividual>
+    
+
 
     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor6 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor6">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
-    <supplyChain:Vendor>SUN PHARMACEUTICAL INDUSTRIES LTD (RANBAXY LABORATORIES LIMITED)</supplyChain:Vendor>
-    <supplyChain:VendorINCOTerm>EXW</supplyChain:VendorINCOTerm>
-</owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
+        <supplyChain:Vendor>SUN PHARMACEUTICAL INDUSTRIES LTD (RANBAXY LABORATORIES LIMITED)</supplyChain:Vendor>
+        <supplyChain:VendorINCOTerm>EXW</supplyChain:VendorINCOTerm>
+    </owl:NamedIndividual>
+    
+
 
     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor7 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor7">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
-    <supplyChain:Vendor>Aurobindo Pharma Limited</supplyChain:Vendor>
-    <supplyChain:VendorINCOTerm>EXW</supplyChain:VendorINCOTerm>
-</owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
+        <supplyChain:Vendor>Aurobindo Pharma Limited</supplyChain:Vendor>
+        <supplyChain:VendorINCOTerm>EXW</supplyChain:VendorINCOTerm>
+    </owl:NamedIndividual>
+    
+
 
     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor8 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor8">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
-    <supplyChain:Vendor>SCMS from RDC</supplyChain:Vendor>
-    <supplyChain:VendorINCOTerm>N/A - From RDC</supplyChain:VendorINCOTerm>
-</owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
+        <supplyChain:Vendor>SCMS from RDC</supplyChain:Vendor>
+        <supplyChain:VendorINCOTerm>N/A - From RDC</supplyChain:VendorINCOTerm>
+    </owl:NamedIndividual>
+    
+
 
     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor9 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor9">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
-    <supplyChain:Vendor>SCMS from RDC</supplyChain:Vendor>
-    <supplyChain:VendorINCOTerm>N/A - From RDC</supplyChain:VendorINCOTerm>
-</owl:NamedIndividual>
 
-    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor10 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor10">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
-    <supplyChain:Vendor>Abbott GmbH  Co. KG</supplyChain:Vendor>
-    <supplyChain:VendorINCOTerm>FCA</supplyChain:VendorINCOTerm>
-</owl:NamedIndividual>
-
-    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor11 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor11">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
-    <supplyChain:Vendor>Orgenics, Ltd</supplyChain:Vendor>
-    <supplyChain:VendorINCOTerm>EXW</supplyChain:VendorINCOTerm>
-</owl:NamedIndividual>
-
-    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor12 -->
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor12">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
-    <supplyChain:Vendor>ZEPHYR BIOMEDICALS</supplyChain:Vendor>
-    <supplyChain:VendorINCOTerm>EXW</supplyChain:VendorINCOTerm>
-</owl:NamedIndividual>
-
-    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor13 -->
-
-<owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor13">
-    <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
-    <supplyChain:Vendor>ZEPHYR BIOMEDICALS</supplyChain:Vendor>
-    <supplyChain:VendorINCOTerm>CIP</supplyChain:VendorINCOTerm>
-</owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor"/>
+        <supplyChain:Vendor>SCMS from RDC</supplyChain:Vendor>
+        <supplyChain:VendorINCOTerm>N/A - From RDC</supplyChain:VendorINCOTerm>
+    </owl:NamedIndividual>
+    
 
 
     <!-- 
