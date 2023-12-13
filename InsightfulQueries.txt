@@ -1,3 +1,92 @@
+####Calculate the FreightCost of different product subclasses:
+
+
+SELECT
+  (SUM(?actFreightCost) AS ?totalFreightCostOfACT)
+  (SUM(?antmFreightCost) AS ?totalFreightCostOfANTM)
+  (SUM(?arvFreightCost) AS ?totalFreightCostOfARV)
+  (SUM(?hrdtFreightCost) AS ?totalFreightCostOfHRDT)
+  (SUM(?mrdtFreightCost) AS ?totalFreightCostOfMRDT)
+WHERE {
+  {
+    ?act rdf:type supplyChain:ACT.
+    ?act supplyChain:FreightCost ?actFreightCost.
+  }
+  UNION
+  {
+    ?antm rdf:type supplyChain:ANTM.
+    ?antm supplyChain:FreightCost ?antmFreightCost.
+  }
+  UNION
+  {
+    ?arv rdf:type supplyChain:ARV.
+    ?arv supplyChain:FreightCost ?arvFreightCost.
+  }
+  UNION
+  {
+    ?hrdt rdf:type supplyChain:HRDT.
+    ?hrdt supplyChain:FreightCost ?hrdtFreightCost.
+  }
+  UNION
+  {
+    ?mrdt rdf:type supplyChain:MRDT.
+    ?mrdt supplyChain:FreightCost ?mrdtFreightCost.
+  }
+}
+
+
+####Calculate the average FreightCost of different product subclasses:
+
+SELECT
+  (AVG(?actFreightCost) AS ?averageFreightCostOfACT)
+  (AVG(?antmFreightCost) AS ?averageFreightCostOfANTM)
+  (AVG(?arvFreightCost) AS ?averageFreightCostOfARV)
+  (AVG(?hrdtFreightCost) AS ?averageFreightCostOfHRDT)
+  (AVG(?mrdtFreightCost) AS ?averageFreightCostOfMRDT)
+WHERE {
+  {
+    ?act rdf:type supplyChain:ACT.
+    ?act supplyChain:FreightCost ?actFreightCost.
+  }
+  UNION
+  {
+    ?antm rdf:type supplyChain:ANTM.
+    ?antm supplyChain:FreightCost ?antmFreightCost.
+  }
+  UNION
+  {
+    ?arv rdf:type supplyChain:ARV.
+    ?arv supplyChain:FreightCost ?arvFreightCost.
+  }
+  UNION
+  {
+    ?hrdt rdf:type supplyChain:HRDT.
+    ?hrdt supplyChain:FreightCost ?hrdtFreightCost.
+  }
+  UNION
+  {
+    ?mrdt rdf:type supplyChain:MRDT.
+    ?mrdt supplyChain:FreightCost ?mrdtFreightCost.
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
