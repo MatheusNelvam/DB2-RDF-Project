@@ -1,4 +1,4 @@
-####Calculate the FreightCost of different product subclasses:
+####1. Calculate the FreightCost of different product subclasses:
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
 
@@ -34,7 +34,7 @@ WHERE {
     ?mrdt supplyChain:FreightCost ?mrdtFreightCost.
   }
 }
-####List product has the highetLineItemInsurance, highetLineItemValue, highetWeight,|highetUnitPrice, highetLineItemQuantity,lowestLineItemInsurance,lowestLineItemValue,lowestWeight, lowestUnitPrice,lowestLineItemQuantity
+####2. List product has the highetLineItemInsurance, highetLineItemValue, highetWeight,|highetUnitPrice, highetLineItemQuantity,lowestLineItemInsurance,lowestLineItemValue,lowestWeight, lowestUnitPrice,lowestLineItemQuantity
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
 
@@ -58,7 +58,7 @@ WHERE {
 ?product supplyChain:LineItemQuantity ?lineItemQuantity.
 FILTER (?weight > 0 &&?lineItemInsurance > 0 && ?lineItemValue>0)
 
-####Calculate the average FreightCost of different product subclasses:
+#### 3. Calculate the average FreightCost of different product subclasses:
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
 SELECT
@@ -95,7 +95,8 @@ WHERE {
 }
 
 
-####Find projects with products where the shipping cost is more than 75% of the total value:
+####4. Find projects with products where the shipping cost is more than 75% of the total value:
+
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
 SELECT ?project ?product ?shippingCost ?totalValue
@@ -109,7 +110,7 @@ WHERE {
 
 
 
-####Count the number of distinct manufacturers for each country
+####5. Count the number of distinct manufacturers for each country
 
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
@@ -123,7 +124,8 @@ PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyCha
  GROUP BY ?country
 
 
-####Retrieve projects with product 
+####6. Retrieve projects with product dosage and dosage form 
+
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
 
@@ -136,8 +138,7 @@ WHERE {
 }
 
 
-
-####Calculate product subClassfication average weight:
+####7. Calculate product subClassfication average weight:
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
 SELECT ?category (AVG(?avgWeight) AS ?averageWeight)
@@ -150,7 +151,8 @@ SELECT ?category (AVG(?avgWeight) AS ?averageWeight)
     GROUP BY ?category
 
 
-####List product SubClassification's highest LineItemValue
+#### 8. List product SubClassification's highest LineItemValue
+
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
 SELECT ?category (MAX(?lineItemValue) AS ?highestValue)
@@ -163,8 +165,7 @@ SELECT ?category (MAX(?lineItemValue) AS ?highestValue)
     GROUP BY ?category
 
 
-
-####List the project with the FreightCost from the highest to the lowest
+#### 9. List the project with the FreightCost from the highest to the lowest
 
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
@@ -176,7 +177,8 @@ PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyCha
     }
     ORDER BY DESC(?FreightCost)
 
-####Calculate the avarage unitprice of all products
+#### 10. Calculate the avarage unitprice of all products
+
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
 SELECT(AVG(?unitPrice) AS ?averageUnitPrice)
@@ -186,26 +188,4 @@ WHERE{
 ?product supplyChain:UnitPrice ?unitPrice .
 }
 
-####List product has the highetLineItemInsurance, highetLineItemValue, highetWeight,highetUnitPrice, highetLineItemQuantity,lowestLineItemInsurance,lowestLineItemValue, lowestWeight, lowestUnitPrice,lowestLineItemQuantity
 
-SELECT  (MAX(?lineItemInsurance) AS ?highetLineItemInsurance)
-(MAX(?lineItemValue) AS ?highetLineItemValue)
-(MAX(?weight) AS ?highetWeight)
-(MAX(?unitPrice) AS ?highetUnitPrice)
-(MAX(?lineItemQuantity) AS ?highetLineItemQuantity)
-(MIN(?lineItemInsurance) AS ?lowestLineItemInsurance)
-(MIN(?lineItemValue) AS ?lowestLineItemValue)
-(MIN(?weight) AS ?lowestWeight)
-(MIN(?unitPrice) AS ?lowestUnitPrice)
-(MIN(?lineItemQuantity) AS ?lowestLineItemQuantity)
-
-    WHERE {
-      	?project rdf:type supplyChain:project .
-      	?project supplyChain:hasProduct ?product .
-	?product supplyChain:LineItemInsurance ?lineItemInsurance .
-	?product supplyChain:LineItemValue ?lineItemValue .
-	?product supplyChain:Weight ?weight .
-	?product supplyChain:UnitPrice ?unitPrice .
-	?product supplyChain:LineItemQuantity ?lineItemQuantity .
- FILTER (?weight > 0 &&?lineItemInsurance > 0  && ?lineItemValue>0)
-}
