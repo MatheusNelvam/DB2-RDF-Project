@@ -8,6 +8,33 @@ This project involves the creation of an ontology to model concepts and relation
 
 The primary goal is to provide a clear and semantic framework to represent different elements involved in a supply chain, such as supply chain projects, shipments, vendors, products, countries, etc. This ontology enhances understanding and interoperability among systems dealing with supply chain-related information.
 
+
+## Project Files
+
+#### Source Code and Ontology
+
+- **InsightfulQueries.txt**: Contains insightful SPARQL queries for the supply chain ontology.
+
+- **populateSupplyChainRDFdb.ipynb**: A Jupyter Notebook file for populating the RDF database with supply chain data.
+
+#### Dataset
+
+- **SCMS_Delivery_History_Dataset(FOR USE).xlsx**: An Excel file containing the supply chain delivery history dataset for use in the project.
+
+- **SCMS_Delivery_History_Dataset(ORIGINAL).csv**: The original CSV version of the supply chain delivery history dataset.
+
+#### Ontology and RDF Data
+
+- **SupplyChain.rdf**: The RDF file representing the supply chain ontology.
+
+#### Visualization
+
+- **visualization.svg**: SVG file depicting a visualization related to the supply chain project.
+
+#### Documentation
+
+- **README.md**: Project documentation providing an overview, objectives, instructions on how to use the ontology, software installation, key components, queries execution, and a disclaimer.
+
 ## How to Use
 
 To utilize the ontology, follow these steps:
