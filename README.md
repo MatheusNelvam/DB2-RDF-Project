@@ -31,6 +31,20 @@ The primary goal is to provide a clear and semantic framework to represent diffe
 
 - **visualization.svg**: SVG file depicting a visualization related to the supply chain project.
 
+#### Serialization files
+
+- **countries.ttl**: The Turtle file with the serialization of countries data.
+- **pq.ttl**: The Turtle file with the serialization of PQ Supply Chain data.
+- **products.ttl**: The Turtle file with the serialization of products data.
+- **projects.ttl**: The Turtle file with the serialization of projects data.
+- **shipment.ttl**: The Turtle file with the serialization of shipment data.
+- **vendors.ttl**: The Turtle file with the serialization of vendors data.
+- **proj-cnt.ttl**: The Turtle file with the joins of project and countries data.
+- **proj-pq.ttl**: The Turtle file with the joins of project and PQ Supply Chain data.
+- **proj-prod.ttl**: The Turtle file with the joins of project and product data.
+- **proj-ship.ttl**: The Turtle file with the joins of project and shipment data.
+- **proj-ven.ttl**: The Turtle file with the joins of project and vendor data.
+
 #### Documentation
 
 - **README.md**: Project documentation providing an overview, objectives, instructions on how to use the ontology, software installation, key components, queries execution, and a disclaimer.
