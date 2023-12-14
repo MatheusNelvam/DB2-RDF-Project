@@ -185,3 +185,27 @@ WHERE{
 ?project supplyChain:hasProduct ?product .
 ?product supplyChain:UnitPrice ?unitPrice .
 }
+
+####List product has the highetLineItemInsurance, highetLineItemValue, highetWeight,highetUnitPrice, highetLineItemQuantity,lowestLineItemInsurance,lowestLineItemValue, lowestWeight, lowestUnitPrice,lowestLineItemQuantity
+
+SELECT  (MAX(?lineItemInsurance) AS ?highetLineItemInsurance)
+(MAX(?lineItemValue) AS ?highetLineItemValue)
+(MAX(?weight) AS ?highetWeight)
+(MAX(?unitPrice) AS ?highetUnitPrice)
+(MAX(?lineItemQuantity) AS ?highetLineItemQuantity)
+(MIN(?lineItemInsurance) AS ?lowestLineItemInsurance)
+(MIN(?lineItemValue) AS ?lowestLineItemValue)
+(MIN(?weight) AS ?lowestWeight)
+(MIN(?unitPrice) AS ?lowestUnitPrice)
+(MIN(?lineItemQuantity) AS ?lowestLineItemQuantity)
+
+    WHERE {
+      	?project rdf:type supplyChain:project .
+      	?project supplyChain:hasProduct ?product .
+	?product supplyChain:LineItemInsurance ?lineItemInsurance .
+	?product supplyChain:LineItemValue ?lineItemValue .
+	?product supplyChain:Weight ?weight .
+	?product supplyChain:UnitPrice ?unitPrice .
+	?product supplyChain:LineItemQuantity ?lineItemQuantity .
+ FILTER (?weight > 0 &&?lineItemInsurance > 0  && ?lineItemValue>0)
+}
