@@ -41,11 +41,7 @@
     
 
 
-    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PackPrice -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PackPrice">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#product"/>
-    </owl:ObjectProperty>
     
 
 
@@ -160,6 +156,12 @@
     </owl:DatatypeProperty>
     
 
+    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PackPrice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PackPrice">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:ObjectProperty>
 
     <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#FirstLineDesignation -->
 
@@ -269,12 +271,6 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PQSupplyChain"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PackPrice -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#PackPrice"/>
     
 
 
@@ -537,7 +533,7 @@
         <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9750</supplyChain:LineItemValue>
         <supplyChain:ManufacturingSite>Ipca Dadra/Nagar Haveli IN</supplyChain:ManufacturingSite>
         <supplyChain:MoleculeTestType>Artesunate+Amodiaquine</supplyChain:MoleculeTestType>
-        <supplyChain:PackPrice>0.39</supplyChain:PackPrice>
+        <supplyChain:PackPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.39</supplyChain:PackPrice>
         <supplyChain:SubClassification>ACT</supplyChain:SubClassification>
         <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.03</supplyChain:UnitPrice>
         <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</supplyChain:UnitofMeasure>
@@ -638,6 +634,7 @@
         <supplyChain:FreightCost  rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16007.06</supplyChain:FreightCost>
         <supplyChain:ItemDescription>Lamivudine 150mg, tablets, 60 Tabs</supplyChain:ItemDescription>
         <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">31920</supplyChain:LineItemQuantity>
+        <supplyChain:LineItemInsurance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</supplyChain:LineItemInsurance>
         <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">127360.8</supplyChain:LineItemValue>
         <supplyChain:ManufacturingSite>Ranbaxy, Paonta Shahib, India</supplyChain:ManufacturingSite>
         <supplyChain:MoleculeTestType>Lamivudine</supplyChain:MoleculeTestType>
@@ -660,6 +657,7 @@
         <supplyChain:FirstLineDesignation>Yes</supplyChain:FirstLineDesignation>
         <supplyChain:FreightCost  rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45450.08</supplyChain:FreightCost>
         <supplyChain:ItemDescription>Stavudine 30mg, capsules, 60 Caps</supplyChain:ItemDescription>
+        <supplyChain:LineItemInsurance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</supplyChain:LineItemInsurance>
         <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">38000</supplyChain:LineItemQuantity>
         <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">121600</supplyChain:LineItemValue>
         <supplyChain:ManufacturingSite>Aurobindo Unit III, India</supplyChain:ManufacturingSite>
@@ -683,6 +681,7 @@
         <supplyChain:FirstLineDesignation>Yes</supplyChain:FirstLineDesignation>
         <supplyChain:FreightCost  rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45450.08</supplyChain:FreightCost>
         <supplyChain:ItemDescription>Stavudine 30mg, capsules, 60 Caps</supplyChain:ItemDescription>
+        <supplyChain:LineItemInsurance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.79</supplyChain:LineItemInsurance>
         <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">38000</supplyChain:LineItemQuantity>
         <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">121600</supplyChain:LineItemValue>
         <supplyChain:ManufacturingSite>Aurobindo Unit III, India</supplyChain:ManufacturingSite>
@@ -748,6 +747,7 @@
         <supplyChain:FirstLineDesignation>Yes</supplyChain:FirstLineDesignation>
         <supplyChain:FreightCost  rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">780.34</supplyChain:FreightCost>
         <supplyChain:ItemDescription>HIV, Reveal G3 Rapid HIV-1 Antibody Test, 30 Tests</supplyChain:ItemDescription>
+        <supplyChain:LineItemInsurance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</supplyChain:LineItemInsurance>
         <supplyChain:LineItemQuantity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</supplyChain:LineItemQuantity>
         <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">551</supplyChain:LineItemValue>
         <supplyChain:ManufacturingSite>Ranbaxy Fine Chemicals LTD</supplyChain:ManufacturingSite>
@@ -833,7 +833,7 @@
         <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4050.0</supplyChain:LineItemValue>
         <supplyChain:ManufacturingSite>Not Applicable</supplyChain:ManufacturingSite>
         <supplyChain:MoleculeTestType>Malaria Paramax-3 Kit</supplyChain:MoleculeTestType>
-        <supplyChain:PackPrice>37.5</supplyChain:PackPrice>
+        <supplyChain:PackPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">37.5</supplyChain:PackPrice>
         <supplyChain:SubClassification>Malaria</supplyChain:SubClassification>
         <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.5</supplyChain:UnitPrice>
         <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</supplyChain:UnitofMeasure>
@@ -857,7 +857,7 @@
         <supplyChain:LineItemValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4050.0</supplyChain:LineItemValue>
         <supplyChain:ManufacturingSite>Not Applicable</supplyChain:ManufacturingSite>
         <supplyChain:MoleculeTestType>Malaria Paramax-3 Kit</supplyChain:MoleculeTestType>
-        <supplyChain:PackPrice>37.5</supplyChain:PackPrice>
+        <supplyChain:PackPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">37.5</supplyChain:PackPrice>
         <supplyChain:SubClassification>Malaria</supplyChain:SubClassification>
         <supplyChain:UnitPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.5</supplyChain:UnitPrice>
         <supplyChain:UnitofMeasure rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</supplyChain:UnitofMeasure>
