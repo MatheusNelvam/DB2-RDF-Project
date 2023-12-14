@@ -1,27 +1,24 @@
-##Find Projects with Products Supplied by Vendors from Multiple Countries and Multiple PQ Supply Chains:
+####Find shipments with products where the shipping cost is more than 75% of the total value
 
-SELECT ?project
+SELECT ?shipment ?product ?shippingCost ?totalValue
 WHERE {
-    ?project <http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#hasProduct> ?product.
-    ?product <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#vendor>.
-    ?product <http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#suppliedFrom> ?vendorCountry.
-    ?project <http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#hasPQ> ?pqSupplyChain.
+  ?shipment rdf:type supplyChain:shipment.
+  ?shipment supplyChain:hasProduct ?product.
+  ?product supplyChain:Line_Item_Value ?totalValue.
+  ?shipment supplyChain:Freight_Cost_USD ?shippingCost.
+  FILTER (xsd:decimal(?shippingCost) > 0.75 * xsd:decimal(?totalValue))
 }
-GROUP BY ?project
-HAVING (COUNT(DISTINCT ?vendorCountry) > 1) && (COUNT(DISTINCT ?pqSupplyChain) > 1)
 
 
-#######
+####Identify countries that have received shipments with products from more than three different manufacturers:
 
-Identify Countries with Projects Having Diverse PQ Supply Chains and Products:
 
-SELECT ?country
+SELECT ?country (COUNT(DISTINCT ?manufacturer) AS ?manufacturerCount)
 WHERE {
-    ?project <http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#hasCountry> ?country.
-    ?project <http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#hasPQ> ?pqSupplyChain.
-    ?project <http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#hasProduct> ?product.
+  ?shipment rdf:type supplyChain:Shipment.
+  ?shipment supplyChain:ShippedTo ?country.
+  ?shipment supplyChain:hasProduct ?product.
+  ?product supplyChain:ManufacturingSite ?manufacturer.
 }
 GROUP BY ?country
-HAVING (COUNT(DISTINCT ?pqSupplyChain) > 1) && (COUNT(DISTINCT ?product) > 1)
-
-#######
+HAVING (COUNT(DISTINCT ?manufacturer) > 3)
