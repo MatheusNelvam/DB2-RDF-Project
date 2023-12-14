@@ -154,3 +154,12 @@ PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyCha
     }
     ORDER BY DESC(?FreightCost)
 
+####Calculate the avarage unitprice of all products
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
+SELECT(AVG(?unitPrice) AS ?averageUnitPrice)
+WHERE{
+?project rdf:type supplyChain:project.
+?project supplyChain:hasProduct ?product .
+?product supplyChain:UnitPrice ?unitPrice 。
+}
