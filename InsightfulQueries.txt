@@ -34,7 +34,29 @@ WHERE {
     ?mrdt supplyChain:FreightCost ?mrdtFreightCost.
   }
 }
+####List product has the highetLineItemInsurance, highetLineItemValue, highetWeight,|highetUnitPrice, highetLineItemQuantity,lowestLineItemInsurance,lowestLineItemValue,lowestWeight, lowestUnitPrice,lowestLineItemQuantity
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
 
+SELECT (MAX(?lineItemInsurance) AS ?highetLineItemInsurance)
+(MAX(?lineItemValue)AS ?highetLineItemValue)
+(MAX(?weight) AS ?highetWeight)
+(MAX(?unitPrice) AS ?highetUnitPrice)
+(MAX(?lineItemQuantity) AS ?highetLineItemQuantity)
+(MIN(?lineItemInsurance) AS ?lowestLineItemInsurance)
+(MIN(?lineItemValue) AS?lowestLineItemValue)
+(MIN(?weight) AS ?lowestWeight)
+(MIN(?unitPrice) AS ?lowestUnitPrice)
+(MIN(?lineItemQuantity) AS ?lowestLineItemQuantity)
+WHERE {
+?project rdf:type supplyChain:project.
+?project supplyChain:hasProduct ?product .
+?product supplyChain:LineItemInsurance ?lineItemInsurance.
+?product supplyChain:LineItemValue ?lineItemValue.
+?product supplyChain:Weight ?weight.
+?product supplyChain:UnitPrice ?unitPrice.
+?product supplyChain:LineItemQuantity ?lineItemQuantity.
+FILTER (?weight > 0 &&?lineItemInsurance > 0 && ?lineItemValue>0)
 
 ####Calculate the average FreightCost of different product subclasses:
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
