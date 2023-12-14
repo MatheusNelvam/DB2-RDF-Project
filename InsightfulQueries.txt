@@ -34,6 +34,7 @@ WHERE {
     ?mrdt supplyChain:FreightCost ?mrdtFreightCost.
   }
 }
+
 ####2. List product has the highetLineItemInsurance, highetLineItemValue, highetWeight,|highetUnitPrice, highetLineItemQuantity,lowestLineItemInsurance,lowestLineItemValue,lowestWeight, lowestUnitPrice,lowestLineItemQuantity
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
@@ -49,14 +50,15 @@ SELECT (MAX(?lineItemInsurance) AS ?highetLineItemInsurance)
 (MIN(?unitPrice) AS ?lowestUnitPrice)
 (MIN(?lineItemQuantity) AS ?lowestLineItemQuantity)
 WHERE {
-?project rdf:type supplyChain:project.
-?project supplyChain:hasProduct ?product .
-?product supplyChain:LineItemInsurance ?lineItemInsurance.
-?product supplyChain:LineItemValue ?lineItemValue.
-?product supplyChain:Weight ?weight.
-?product supplyChain:UnitPrice ?unitPrice.
-?product supplyChain:LineItemQuantity ?lineItemQuantity.
-FILTER (?weight > 0 &&?lineItemInsurance > 0 && ?lineItemValue>0)
+    ?project rdf:type supplyChain:project.
+    ?project supplyChain:hasProduct ?product .
+    ?product supplyChain:LineItemInsurance ?lineItemInsurance.
+    ?product supplyChain:LineItemValue ?lineItemValue.
+    ?product supplyChain:Weight ?weight.
+    ?product supplyChain:UnitPrice ?unitPrice.
+    ?product supplyChain:LineItemQuantity ?lineItemQuantity.
+    FILTER (?weight > 0 &&?lineItemInsurance > 0 && ?lineItemValue>0)
+}
 
 #### 3. Calculate the average FreightCost of different product subclasses:
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -114,14 +116,15 @@ WHERE {
 
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
- SELECT ?country (COUNT(DISTINCT ?manufacturer) AS ?manufacturerCount)
-    WHERE {
-      ?project rdf:type supplyChain:project .
-      ?project supplyChain:hasCountry ?country .
-      ?project supplyChain:hasProduct ?product .
-      ?product supplyChain:ManufacturingSite ?manufacturer .
-    }
- GROUP BY ?country
+SELECT ?country (COUNT(DISTINCT ?manufacturer) AS ?manufacturerCount)
+WHERE {
+    ?project rdf:type supplyChain:project .
+    ?project supplyChain:hasCountry ?country .
+    ?project supplyChain:hasProduct ?product .
+    ?product supplyChain:ManufacturingSite ?manufacturer .
+}
+GROUP BY ?country
+ORDER BY DESC(?manufacturerCount)
 
 
 ####6. Retrieve projects with product dosage and dosage form 
@@ -142,13 +145,14 @@ WHERE {
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
 SELECT ?category (AVG(?avgWeight) AS ?averageWeight)
-    WHERE {
-      	?project rdf:type supplyChain:project .
-      	?project supplyChain:hasProduct ?product .
-	?product supplyChain:SubClassification ?category .
-      	?product supplyChain:Weight ?avgWeight .
-    }
-    GROUP BY ?category
+WHERE {
+    ?project rdf:type supplyChain:project .
+    ?project supplyChain:hasProduct ?product .
+    ?product supplyChain:SubClassification ?category .
+    ?product supplyChain:Weight ?avgWeight .
+}
+GROUP BY ?category
+ORDER BY DESC(?averageWeight)
 
 
 #### 8. List product SubClassification's highest LineItemValue
@@ -156,13 +160,14 @@ SELECT ?category (AVG(?avgWeight) AS ?averageWeight)
 PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
 SELECT ?category (MAX(?lineItemValue) AS ?highestValue)
-    WHERE {
-      	?project rdf:type supplyChain:project .
-      	?project supplyChain:hasProduct ?product .
+WHERE {
+   	?project rdf:type supplyChain:project .
+   	?project supplyChain:hasProduct ?product .
 	?product supplyChain:SubClassification ?category .
-      	?product supplyChain:LineItemValue ?lineItemValue .
-    }
-    GROUP BY ?category
+   	?product supplyChain:LineItemValue ?lineItemValue .
+}
+GROUP BY ?category
+ORDER BY DESC(?highestValue)
 
 
 #### 9. List the project with the FreightCost from the highest to the lowest
@@ -188,4 +193,16 @@ WHERE{
 ?product supplyChain:UnitPrice ?unitPrice .
 }
 
+#### 11. Identify the country with the most shipments
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX supplyChain: <http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
+SELECT ?country (COUNT(?shipment) AS ?shipmentCount)
+WHERE {
+    ?project rdf:type supplyChain:project .
+    ?project supplyChain:hasShipment ?shipment .
+    ?project supplyChain:hasCountry ?country .
+}
+GROUP BY ?country
+ORDER BY DESC(?shipmentCount)
 
