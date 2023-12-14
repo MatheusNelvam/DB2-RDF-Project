@@ -16,13 +16,14 @@ To utilize the ontology, you can explore and edit concepts and relationships in 
 
 The main classes in the ontology include:
 
-- **SupplyChainProject:** Represents specific projects related to the supply chain.
+- **Project:** Represents specific projects related to the supply chain.
 - **Shipment:** Represents the physical shipment of products.
 - **Vendor:** Represents suppliers or sellers.
 - **Product:** Represents specific products.
 - **Country:** Represents countries.
+- **PQSupplyChain:** Represents PQ-related data.
 
-Additionally, properties such as `belongsToChain`, `hasShipment`, `suppliesProduct`, `projectName`, `vendorName`, `shipmentDate`, and `productPrice` are used to define specific relationships and attributes.
+Additionally, properties such as `hasShipment`, `hasProduct`, `hasVendor`, `hasCountry`, `hasPQSupplyChain`,  are used to define specific relationships and attributes.
 
 ### Disclaimer
 
