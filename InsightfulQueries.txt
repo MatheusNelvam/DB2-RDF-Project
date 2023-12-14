@@ -1,5 +1,6 @@
 ####Calculate the FreightCost of different product subclasses:
-
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
 
 SELECT
   (SUM(?actFreightCost) AS ?totalFreightCostOfACT)
@@ -36,7 +37,8 @@ WHERE {
 
 
 ####Calculate the average FreightCost of different product subclasses:
-
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
 SELECT
   (AVG(?actFreightCost) AS ?averageFreightCostOfACT)
   (AVG(?antmFreightCost) AS ?averageFreightCostOfANTM)
@@ -71,223 +73,84 @@ WHERE {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-####Find shipments with products where the shipping cost is more than 75% of the total value:
-
-SELECT ?shipment ?product ?shippingCost ?totalValue
+####Find projects with products where the shipping cost is more than 75% of the total value:
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
+SELECT ?project ?product ?shippingCost ?totalValue
 WHERE {
-  ?shipment rdf:type supplyChain:shipment .
-  ?shipment supplyChain:hasProduct ?product .
+  ?project rdf:type supplyChain:project .
+  ?project supplyChain:hasProduct ?product .
   ?product supplyChain:LineItemValue ?totalValue .
-  ?shipment supplyChain:FreightCost ?shippingCost .
+  ?product supplyChain:FreightCost ?shippingCost .
   FILTER (?shippingCost > 0.75 * ?totalValue)
 }
 
 
 
-####Identify countries that have received shipments with products from more than three different manufacturers:
+####Count the number of distinct manufacturers for each country
 
-
-SELECT ?country ?manufacturerCount
-WHERE {
-  ?shipment rdf:type supplyChain:shipment .
-  ?shipment supplyChain:ShippedTo ?country .
-  ?shipment supplyChain:hasProduct ?product .
-  ?product supplyChain:ManufacturingSite ?manufacturer .
-  {
-    SELECT ?country (COUNT(DISTINCT ?manufacturer) AS ?manufacturerCount)
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
+ SELECT ?country (COUNT(DISTINCT ?manufacturer) AS ?manufacturerCount)
     WHERE {
-      ?s rdf:type supplyChain:shipment .
-      ?s supplyChain:ShippedTo ?country .
-      ?s supplyChain:hasProduct ?p .
-      ?p supplyChain:ManufacturingSite ?manufacturer .
+      ?project rdf:type supplyChain:project .
+      ?project supplyChain:hasCountry ?country .
+      ?project supplyChain:hasProduct ?product .
+      ?product supplyChain:ManufacturingSite ?manufacturer .
     }
-    GROUP BY ?country
-    HAVING (?manufacturerCount > 3)
-  }
-}
+ GROUP BY ?country
 
 
-####Retrieve shipments with products where the dosage forms are the same but the dosages are different:
+####Retrieve projects with product 
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
 
-
-SELECT ?shipment ?product1 ?product2 ?dosageForm ?dosage1 ?dosage2
+SELECT ?project ?product?dosageForm ?dosage
 WHERE {
-  ?shipment rdf:type supplyChain:shipment .
-  ?shipment supplyChain:hasProduct ?product1, ?product2 .
-  ?product1 supplyChain:DosageForm ?dosageForm .
-  ?product1 supplyChain:Dosage ?dosage1 .
-  ?product2 supplyChain:Dosage ?dosage2 .
-  FILTER (?product1 != ?product2 && ?dosage1 != ?dosage2)
+  ?project rdf:type supplyChain:project .
+  ?project supplyChain:hasProduct ?product .
+  ?product supplyChain:DosageForm ?dosageForm .
+  ?product supplyChain:Dosage ?dosage .
 }
 
 
 
-####Find shipments with products where the weight is more than 150% of the average weight for that product category:
-
-
-
-SELECT ?shipment ?product ?category ?weight ?averageWeight
-WHERE {
-  ?shipment rdf:type supplyChain:shipment .
-  ?shipment supplyChain:hasProduct ?product .
-  ?product supplyChain:SubClassification ?category .
-  ?shipment supplyChain:Weight ?weight .
-  {
-    SELECT ?category (AVG(?avgWeight) AS ?averageWeight)
+####Calculate product subClassfication average weight:
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
+SELECT ?category (AVG(?avgWeight) AS ?averageWeight)
     WHERE {
-      ?p rdf:type supplyChain:product .
-      ?p supplyChain:SubClassification ?category .
-      ?s rdf:type supplyChain:shipment .
-      ?s supplyChain:hasProduct ?p .
-      ?s supplyChain:Weight ?avgWeight .
+      	?project rdf:type supplyChain:project .
+      	?project supplyChain:hasProduct ?product .
+	?product supplyChain:SubClassification ?category .
+      	?product supplyChain:Weight ?avgWeight .
     }
     GROUP BY ?category
-  }
-  FILTER (?weight > 1.5 * ?averageWeight)
-}
 
 
-
-####List shipments with products having the highest total value for each country:
-
-
-
-
-SELECT ?country ?shipment ?totalValue
-WHERE {
-  ?shipment rdf:type supplyChain:shipment .
-  ?shipment supplyChain:ShippedTo ?country .
-  ?shipment supplyChain:LineItemValue ?totalValue .
-  {
-    SELECT ?country (MAX(?maxValue) AS ?highestValue)
+####List product SubClassification's highest LineItemValue
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
+SELECT ?category (MAX(?lineItemValue) AS ?highestValue)
     WHERE {
-      ?s rdf:type supplyChain:shipment .
-      ?s supplyChain:ShippedTo ?country .
-      ?s supplyChain:LineItemValue ?maxValue .
+      	?project rdf:type supplyChain:project .
+      	?project supplyChain:hasProduct ?product .
+	?product supplyChain:SubClassification ?category .
+      	?product supplyChain:LineItemValue ?lineItemValue .
     }
-    GROUP BY ?country
-  }
-  FILTER (?totalValue = ?highestValue)
-}
+    GROUP BY ?category
 
 
 
+####List the project with the FreightCost from the highest to the lowest
 
-####Identify shipments with products having the highest and lowest freight costs:
-
-
-SELECT ?shipment ?product ?freightCost
-WHERE {
-  {
-    SELECT ?product (MAX(?maxFreightCost) AS ?highestFreightCost) (MIN(?minFreightCost) AS ?lowestFreightCost)
+PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX supplyChain:<http://www.semanticweb.org/MONC/ontologies/2023/11/supplyChain#>
+    SELECT ?project ?product ?FreightCost
     WHERE {
-      ?p rdf:type supplyChain:product .
-      ?p supplyChain:FreightCost ?maxFreightCost .
-      ?p supplyChain:FreightCost ?minFreightCost .
+      ?project rdf:type supplyChain:project .
+      ?project supplyChain:hasProduct ?product .
+      ?product supplyChain:FreightCost ?FreightCost .
     }
-    GROUP BY ?product
-  }
-  ?shipment rdf:type supplyChain:shipment .
-  ?shipment supplyChain:hasProduct ?product .
-  {
-    ?product supplyChain:FreightCost ?highestFreightCost .
-  } UNION {
-    ?product supplyChain:FreightCost ?lowestFreightCost .
-  }
-}
+    ORDER BY DESC(?FreightCost)
 
-
-
-
-####Retrieve shipments with products where the unit price is within 10% of the average unit price for all products:
-
-
-
-
-SELECT ?shipment ?product ?unitPrice ?averageUnitPrice
-WHERE {
-  ?shipment rdf:type supplyChain:shipment .
-  ?shipment supplyChain:hasProduct ?product .
-  ?product supplyChain:UnitPrice ?unitPrice .
-  {
-    SELECT (AVG(?avgUnitPrice) AS ?averageUnitPrice)
-    WHERE {
-      ?p rdf:type supplyChain:product .
-      ?p supplyChain:UnitPrice ?avgUnitPrice .
-    }
-  }
-  FILTER (ABS(?unitPrice - ?averageUnitPrice) / ?averageUnitPrice < 0.1)
-}
-
-
-
-
-####Find shipments with products where the line item quantity is more than 50% of the average quantity for that product:
-
-
-
-SELECT ?shipment ?product ?quantity ?averageQuantity
-WHERE {
-  ?shipment rdf:type supplyChain:shipment .
-  ?shipment supplyChain:hasProduct ?product .
-  ?product supplyChain:LineItemQuantity ?quantity .
-  {
-    SELECT ?product (AVG(?avgQuantity) AS ?averageQuantity)
-    WHERE {
-      ?p rdf:type supplyChain:product .
-      ?p supplyChain:LineItemQuantity ?avgQuantity .
-    }
-    GROUP BY ?product
-  }
-  FILTER (?quantity > 1.5 * ?averageQuantity)
-}
-
-
-
-#####List shipments where the shipping country and manufacturing country are different for each product:
-
-
-
-SELECT ?shipment ?product ?shippingCountry ?manufacturingCountry
-WHERE {
-  ?shipment rdf:type supplyChain:shipment .
-  ?shipment supplyChain:hasProduct ?product .
-  ?product supplyChain:ManufacturingSite ?manufacturingCountry .
-  ?shipment supplyChain:ShippedTo ?shippingCountry .
-  FILTER (?manufacturingCountry != ?shippingCountry)
-}
-
-
-
-
-####Retrieve shipments with products where the manufacturing site is the same but the products have different dosages:
-
-
-SELECT ?shipment ?product1 ?product2 ?manufacturer ?dosage1 ?dosage2
-WHERE {
-  ?shipment rdf:type supplyChain:shipment .
-  ?shipment supplyChain:hasProduct ?product1, ?product2 .
-  ?product1 supplyChain:ManufacturingSite ?manufacturer .
-  ?product1 supplyChain:Dosage ?dosage1 .
-  ?product2 supplyChain:Dosage ?dosage2 .
-  FILTER (?product1 != ?product2 && ?dosage1 != ?dosage2)
-}
