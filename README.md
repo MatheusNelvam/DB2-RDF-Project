@@ -28,10 +28,6 @@ To utilize the ontology, follow these steps:
 - Open an ontology file in your system (e.g., .ttl, .owl) by clicking `File -> Open`.
 - Open an ontology file on the web by copying its URL, then click `File -> Open by URL` and paste the URL into the URI text box.
 
-
-
-Ensure you've installed the Snap SPARQL Query Plugin.
-
 ### Key Components
 
 The main classes in the ontology include:
@@ -47,7 +43,9 @@ Properties such as `hasShipment`, `hasProduct`, `hasVendor`, `hasCountry`, `hasP
 
 ### Queries Execution
 #### Configuring Protégé to Run SPARQL Queries
+
 To execute SPARQL queries:
+Ensure you've installed the Snap SPARQL Query Plugin.
 
 1. Open Protégé with an ontology.
 2. Go to `Window -> Tabs -> SPARQL Query` and enable it.
