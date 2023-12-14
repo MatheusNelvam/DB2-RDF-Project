@@ -34,6 +34,7 @@ The primary goal is to provide a clear and semantic framework to represent diffe
 #### Documentation
 
 - **README.md**: Project documentation providing an overview, objectives, instructions on how to use the ontology, software installation, key components, queries execution, and a disclaimer.
+- **analytics.pdf**: Analytics analyzes the result of the queries and give some analysis of the data based on the queries result.
 
 ## How to Use
 
